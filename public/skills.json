@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Acrobaties",
+    "ability": "dex",
+    "description": "Votre capacité à garder l'équilibre, faire des cascades et des prouesses acrobatiques."
+  },
+  {
+    "name": "Arcanes",
+    "ability": "int",
+    "description": "Votre connaissance de la magie, des sorts, des objets magiques et des traditions magiques."
+  },
+  {
+    "name": "Athlétisme",
+    "ability": "for",
+    "description": "Votre capacité à grimper, sauter, nager et autres exploits physiques."
+  },
+  {
+    "name": "Discrétion",
+    "ability": "dex",
+    "description": "Votre capacité à vous cacher et à vous déplacer silencieusement."
+  },
+  {
+    "name": "Dressage",
+    "ability": "sag",
+    "description": "Votre capacité à gérer et comprendre les animaux."
+  },
+  {
+    "name": "Escamotage",
+    "ability": "dex",
+    "description": "Votre habileté manuelle pour les tours de passe-passe et le vol à la tire."
+  },
+  {
+    "name": "Histoire",
+    "ability": "int",
+    "description": "Votre connaissance des événements historiques, des personnages légendaires et des anciennes traditions."
+  },
+  {
+    "name": "Intimidation",
+    "ability": "cha",
+    "description": "Votre capacité à influencer les autres par la menace."
+  },
+  {
+    "name": "Intuition",
+    "ability": "sag",
+    "description": "Votre capacité à percevoir les intentions et les émotions des autres."
+  },
+  {
+    "name": "Investigation",
+    "ability": "int",
+    "description": "Votre capacité à chercher des indices et faire des déductions."
+  },
+  {
+    "name": "Médecine",
+    "ability": "sag",
+    "description": "Votre capacité à stabiliser un mourant ou diagnostiquer une maladie."
+  },
+  {
+    "name": "Nature",
+    "ability": "int",
+    "description": "Votre connaissance du terrain, de la flore, de la faune et du climat."
+  },
+  {
+    "name": "Perception",
+    "ability": "sag",
+    "description": "Votre capacité à repérer, entendre ou détecter la présence de quelque chose."
+  },
+  {
+    "name": "Perspicacité",
+    "ability": "sag",
+    "description": "Votre capacité à déterminer les véritables intentions d'une créature."
+  },
+  {
+    "name": "Persuasion",
+    "ability": "cha",
+    "description": "Votre capacité à influencer les autres par le tact et le charme."
+  },
+  {
+    "name": "Religion",
+    "ability": "int",
+    "description": "Votre connaissance des dieux, des rites et des prières."
+  },
+  {
+    "name": "Représentation",
+    "ability": "cha",
+    "description": "Votre capacité à divertir un public par la musique, la danse, le théâtre..."
+  },
+  {
+    "name": "Survie",
+    "ability": "sag",
+    "description": "Votre capacité à suivre des traces, chasser et vous orienter en milieu naturel."
+  },
+  {
+    "name": "Tromperie",
+    "ability": "cha",
+    "description": "Votre capacité à mentir de façon convaincante et à dissimuler vos véritables intentions."
+  }
+]

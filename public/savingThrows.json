@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Force",
+        "description": "Utilisé pour résister aux effets qui vous poussent, vous renversent ou vous déplacent contre votre gré.",
+        "ability": "for"
+    },
+    {
+        "name": "Dextérité",
+        "description": "Utilisé pour éviter les pièges, les sorts de zone et autres dangers qui nécessitent rapidité et agilité.",
+        "ability": "dex"
+    },
+    {
+        "name": "Constitution",
+        "description": "Utilisé pour résister aux maladies, au poison et aux effets qui drainent votre énergie vitale.",
+        "ability": "con"
+    },
+    {
+        "name": "Intelligence",
+        "description": "Utilisé pour résister aux effets magiques qui attaquent votre esprit et votre intellect.",
+        "ability": "int"
+    },
+    {
+        "name": "Sagesse",
+        "description": "Utilisé pour résister aux charmes, aux illusions et autres effets qui manipulent votre perception.",
+        "ability": "sag"
+    },
+    {
+        "name": "Charisme",
+        "description": "Utilisé pour résister aux effets qui tentent de contrôler, bannir ou influencer votre personnalité.",
+        "ability":w "cha"
+    }
+]

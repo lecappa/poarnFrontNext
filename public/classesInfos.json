@@ -1,0 +1,135 @@
+
+[
+    {
+        "nom": "Barbare",
+        "deVie": "D12",
+        "maitrises": ["Armures légères", "Armures intermédiaires", "Boucliers", "Armes courantes", "Armes de guerre"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Force", "Constitution"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Athlétisme", "Dressage", "Intimidation", "Nature", "Perception", "Survie"]
+        }
+    },
+    {
+        "nom": "Barde",
+        "deVie": "D8",
+        "maitrises": ["Armures légères", "Armes courantes", "Arbalètes de poing", "Épées longues", "Rapières", "Épées courtes"],
+        "outils": ["Trois instruments de musique au choix"],
+        "jetsDeSauvegarde": ["Dextérité", "Charisme"],
+        "competences": {
+            "nombre": 3,
+            "liste": ["Acrobaties", "Arcanes", "Athlétisme", "Discrétion", "Histoire", "Intimidation", "Investigation", "Médecine", "Nature", "Perception", "Persuasion", "Religion", "Représentation", "Supercherie"]
+        }
+    },
+    {
+        "nom": "Clerc",
+        "deVie": "D8",
+        "maitrises": ["Armures légères", "Armures intermédiaires", "Boucliers", "Armes courantes"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Sagesse", "Charisme"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Histoire", "Médecine", "Perspicacité", "Persuasion", "Religion"]
+        }
+    },
+    {
+        "nom": "Druide",
+        "deVie": "D8",
+        "maitrises": ["Armures légères", "Armures intermédiaires", "Boucliers (non métalliques)", "Gourdins", "Dagues", "Fléchettes", "Javelines", "Masses", "Bâtons", "Cimeterres", "Serpes", "Frondes", "Lances"],
+        "outils": ["Kit d'herboriste"],
+        "jetsDeSauvegarde": ["Intelligence", "Sagesse"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Arcanes", "Dressage", "Médecine", "Nature", "Perception", "Perspicacité", "Religion", "Survie"]
+        }
+    },
+    {
+        "nom": "Ensorceleur",
+        "deVie": "D6",
+        "maitrises": ["Dagues", "Fléchettes", "Frondes", "Bâtons", "Arbalètes légères"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Constitution", "Charisme"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Arcanes", "Intimidation", "Perspicacité", "Persuasion", "Religion", "Supercherie"]
+        }
+    },
+    {
+        "nom": "Guerrier",
+        "deVie": "D10",
+        "maitrises": ["Toutes les armures", "Boucliers", "Armes courantes", "Armes de guerre"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Force", "Constitution"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Acrobaties", "Athlétisme", "Dressage", "Histoire", "Intimidation", "Perception", "Perspicacité", "Survie"]
+        }
+    },
+    {
+        "nom": "Magicien",
+        "deVie": "D6",
+        "maitrises": ["Dagues", "Fléchettes", "Frondes", "Bâtons", "Arbalètes légères"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Intelligence", "Sagesse"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Arcanes", "Histoire", "Investigation", "Médecine", "Perspicacité", "Religion"]
+        }
+    },
+    {
+        "nom": "Moine",
+        "deVie": "D8",
+        "maitrises": ["Armes courantes", "Épées courtes"],
+        "outils": ["Un type d'outils d'artisan ou un instrument de musique"],
+        "jetsDeSauvegarde": ["Force", "Dextérité"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Acrobaties", "Athlétisme", "Discrétion", "Histoire", "Perspicacité", "Religion"]
+        }
+    },
+    {
+        "nom": "Paladin",
+        "deVie": "D10",
+        "maitrises": ["Toutes les armures", "Boucliers","Armes courantes", "Armes de guerre"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Sagesse", "Charisme"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Athlétisme", "Intimidation", "Médecine", "Perspicacité", "Persuasion", "Religion"]
+        }
+    },
+    {
+        "nom": "Rôdeur",
+        "deVie": "D10",
+        "maitrises": ["Armures légères", "Armures intermédiaires", "Boucliers", "Armes courantes", "Armes de guerre"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Force", "Dextérité"],
+        "competences": {
+            "nombre": 3,
+            "liste": ["Athlétisme", "Discrétion", "Dressage", "Investigation", "Nature", "Perception", "Perspicacité", "Survie"]
+        }
+    },
+    {
+        "nom": "Roublard",
+        "deVie": "D8",
+        "maitrises": ["Armures légères","Armes courantes", "Arbalètes de poing", "Épées longues", "Rapières", "Épées courtes"],
+        "outils": ["Outils de voleur", "Kit d'empoisonneur"],
+        "jetsDeSauvegarde": ["Dextérité", "Intelligence"],
+        "competences": {
+            "nombre": 4,
+            "liste": ["Acrobaties", "Athlétisme", "Discrétion", "Escamotage", "Intimidation", "Investigation", "Perception", "Perspicacité", "Persuasion", "Représentation", "Supercherie"]
+        }
+    },
+    {
+        "nom": "Sorcier",
+        "deVie": "D8",
+        "maitrises":  ["Armures légères", "Armes courantes"],
+        "outils": [],
+        "jetsDeSauvegarde": ["Sagesse", "Charisme"],
+        "competences": {
+            "nombre": 2,
+            "liste": ["Arcanes", "Histoire", "Investigation", "Nature", "Religion", "Supercherie"]
+        }
+    }
+]

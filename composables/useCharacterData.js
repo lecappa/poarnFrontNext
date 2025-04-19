@@ -1,0 +1,40 @@
+import classesInfos from "public/classesInfos.json";
+
+const route = useRoute();
+const {findOne} = useStrapi();
+export const useCharacterData = () => {
+    return useState('characterData', () => [])
+}
+
+
+export const getClassSkills = () => {
+    const data = useCharacterData();
+    return data.value.class.forEach((element) => {
+        const infos = getFullInfosCLass(element.class_name);
+        element.deVie = infos[0].deVie
+        element.maitrises = infos[0].maitrises
+        element.jetsDeSauvegarde = infos[0].jetsDeSauvegarde
+    });
+}
+
+export const getClassSkillsMastery = () => {
+    const data = useCharacterData();
+    const skills = [];
+    const allSkills = data.value.class.forEach((element, i) => {
+        skills.push(element.maitrises);
+    })
+    return new Set(skills.flat());
+}
+export const callCharacterData = async () => {
+    const response = await findOne('characters', route.params.id, {
+        populate: [
+            'characteristics', 'informations', 'skills', 'class', 'life_points', 'mastery',
+        ]
+    });
+    const data = useCharacterData();
+    return data.value = response.data[0];
+}
+
+const getFullInfosCLass = (className) => {
+    return (classesInfos.filter((i) => i.nom === className));
+}
