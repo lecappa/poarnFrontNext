@@ -17,7 +17,7 @@ const password = ref('');
 const onSubmit = async () => {
   try {
     await login({identifier: identifier.value, password: password.value})
-    await router.push('/character/')
+    await router.push('/character/fiche')
   } catch (e) {
   }
 }

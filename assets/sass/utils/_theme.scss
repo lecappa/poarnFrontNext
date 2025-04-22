@@ -1,20 +1,23 @@
 @use "variables" as *;
 
 body {
-  font-family: Open Sans, serif !important;
-  background-attachment: fixed;
-  background-color: #000 !important;
-  background-image: url(../bg-app.jpg);
-  background-position: 0 0;
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url("../bg-app.jpg");
+  background-color: #070301;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff !important;
-  font-size: 1.6rem !important;
-  font-style: normal;
-  font-weight: 400;
+  background-attachment: fixed;
+  color: #fff;
+  font-size: 1.6rem;
   padding: 5rem;
   scroll-behavior: smooth;
   line-height: 1.5;
+
+  @media (max-width: $sm) {
+    padding: 2rem;
+  }
 }
 
 section {
@@ -57,7 +60,7 @@ section {
   }
 
   li {
-    border: 1px solid #444;
+    border: 1px solid #544c42;
     margin-left: -1px;
     padding: 2rem;
     width: 100%;
@@ -65,7 +68,7 @@ section {
     position: relative;
 
     &.bg-color {
-      background-color: $pink;
+      background-color: $orange;
 
       b {
         color: $white;
@@ -73,16 +76,16 @@ section {
     }
 
     b {
-      color: $pink;
+      color: $white;
       display: block;
       font-size: 3rem;
-      font-weight: 900;
+      font-weight: 800;
     }
 
     span {
       display: block;
       margin-bottom: 1rem;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       text-transform: uppercase;
     }
   }
@@ -91,28 +94,47 @@ section {
 
 
 .square-section {
-  background-color: #0003;
-  border: 1px solid hsla(0, 0%, 100%, .1);
+  background-color: #342c22;
+  border: 1px solid #544c42;
   border-radius: 6px;
-  overflow: hidden;
   padding: 6rem 3rem 3rem;
   position: relative;
   width: 100%;
-  font-size: 1.4rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  @media (max-width: $sm) {
+    padding: 6rem 1rem 1rem;
+  }
 
   h4 {
-    background-color: $black;
-    color: $pink;
+    background-color: $white;
+    color: $black;
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
     left: 0;
-    letter-spacing: 2px;
     margin-bottom: 3rem;
-    padding: .6rem .8rem;
+    padding: .6rem 1rem;
     position: absolute;
     text-transform: uppercase;
     top: 0;
+    border-radius: 0 0 6px 0;
+  }
+
+  h5 {
+    background-color: $pink;
+    color: $white;
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    left: 0;
+    margin-bottom: 3rem;
+    padding: .6rem 1rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    border-radius: 0 0 6px 0;
   }
 }
 
@@ -120,18 +142,8 @@ section {
   list-style: none;
   margin: 0;
   padding: 0;
-
-  &-item {
-    background-color: #0000001a;
-    border: 1px solid hsla(0, 0%, 100%, .1);
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .5rem;
-    padding: .5rem 1rem;
-    position: relative;
-    white-space: nowrap;
-    width: 100%;
-  }
+  border-radius: .5rem;
+  overflow: hidden;
 
   .add-line {
     display: block;
@@ -139,7 +151,19 @@ section {
     width: 4.5rem;
     font-weight: 800;
   }
+
+  &-item {
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
+    padding: 1rem;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+  }
 }
+
 
 .align-items-stretch {
   align-items: stretch !important;
@@ -153,6 +177,7 @@ section {
 .container {
   width: 100%;
   max-width: 132rem;
+  margin-top: 10rem;
 }
 
 .form-check-input {
@@ -170,15 +195,182 @@ section {
   width: 1.6rem;
   margin-left: 0;
   margin-right: 1rem;
-  border-radius: 0;
   cursor: pointer;
+  border-radius: 50%;
 
   &:checked[type="checkbox"] {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3E%3C/svg%3E");
   }
 
   &:checked {
-    background-color: $pink;
-    border-color: $pink;
+    background-color: $orange;
+    border-color: $orange;
   }
+}
+
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+
+  ul {
+    width: 100%;
+    max-width: 132rem;
+    list-style: none;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 0 1rem;
+    }
+
+    a {
+      color: $orange;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.invisible_input {
+  font-family: "Spectral", serif;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: $white;
+  text-align: right;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: all .25s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  padding: 0;
+  width: 50%;
+
+  &:hover, &:focus {
+    background-color: #fcf5d2;
+    color: #000;
+    outline: none;
+    padding-right: .5rem;
+  }
+}
+
+.btn {
+  font-size: 1.4rem;
+  background-color: $orange;
+  appearance: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: .3rem;
+  cursor: pointer;
+
+  &-full {
+    width: 100%;
+  }
+  &-text {
+    background-color: transparent;
+    color:$white;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.dialog-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(41, 35, 27, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+
+}
+
+.dialog {
+  background-color: #342c22;
+  border: 1px solid #544c42;
+  border-radius: 6px;
+  box-shadow: 0 0 120px $black;
+  width: 100%;
+  max-width: 50rem;
+  padding: 3rem;
+  transition: all .25s ease-in-out;
+
+  @media (max-width: $sm) {
+    width: 90%;
+  }
+
+  .body {
+    padding-top: 2rem;
+  }
+
+  footer {
+    padding-top: 2rem;
+    border-top: 1px solid #fff;
+  }
+
+  header {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    button {
+      appearance: none;
+      background-color: transparent;
+      border:none;
+      font-size: 2rem;
+      color:$white;
+      padding: 1rem;
+      width: 5rem;
+      cursor: pointer;
+    }
+  }
+
+  .input {
+    font-size: 1.6rem;
+    font-family: "Spectral", serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: $white;
+    color: $black;
+    margin-bottom: -1px;
+    outline: none;
+    padding: 1rem;
+    transition: all .25s ease-in-out;
+    width: 100%;
+    border: none;
+
+    &.select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");;
+      background-repeat: no-repeat;
+      background-position:
+              right .75rem center;
+      background-size: 16px 12px;
+    }
+  }
+}
+
+.small-label {
+  font-family: sans-serif;
+  display: inline-block;
+  background-color: transparent;
+  font-size: 1.1rem;
+  color:$white;
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 600;
 }

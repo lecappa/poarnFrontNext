@@ -2,7 +2,7 @@
   <section v-if="data" class="square-section">
     <h4>Skills</h4>
     <ul class="row listing">
-      <li v-for="(skill, key) in character_data_skills" :key="key" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <li v-for="(skill, key) in character_data_skills" :key="key" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div class="listing-item">
           <label :for="key + '-0'">
             <input class="form-check-input" type="checkbox" :id="key + '-0'" v-model="skill.mastery">

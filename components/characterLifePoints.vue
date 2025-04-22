@@ -1,16 +1,16 @@
 <template>
   <section v-if="data" class="square-section">
     <h4>Points de vie</h4>
-    <ul class="listing">
-      <li>
+    <ul class="listing row">
+      <li class="col-lg-6">
         <div class="listing-item">
           <p>
-            Actuel</p> <b class="add-line">{{ life_points.current }}</b>
+            Points de vie actuel</p> <input type="number" min="0" class="invisible_input" v-model="life_points.current">
         </div>
       </li>
-      <li>
+      <li class="col-lg-6">
         <div class="listing-item">
-          <p>Max</p> <b class="add-line">{{ life_points.max }}</b>
+          <p>Points de vie max</p> <input type="number" min="0" class="invisible_input" v-model="life_points.max">
         </div>
       </li>
     </ul>
