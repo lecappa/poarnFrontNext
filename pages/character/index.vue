@@ -1,11 +1,23 @@
 <template>
-  <h1>HOME</h1>
-  <character-informations></character-informations>
-  <character-class></character-class>
-  <character-characteristics></character-characteristics>
-  <character-skills></character-skills>
-  <character-saving-throws></character-saving-throws>
-  <character-life-points></character-life-points>
+  <div class="row d-flex align-items-stretch">
+    <div class="col-lg-12">
+      <character-characteristics></character-characteristics>
+    </div>
+    <div class="12 d-flex align-items-stretch">
+      <character-skills></character-skills>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-items-stretch">
+      <div>
+        <character-saving-throws></character-saving-throws>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-items-stretch">
+      <div>
+        <character-life-points></character-life-points>
+      </div>
+    </div>
+  </div>
+
   <character-skills-mastery></character-skills-mastery>
 </template>
 

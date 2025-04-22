@@ -1,0 +1,184 @@
+@use "variables" as *;
+
+body {
+  font-family: Open Sans, serif !important;
+  background-attachment: fixed;
+  background-color: #000 !important;
+  background-image: url(../bg-app.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff !important;
+  font-size: 1.6rem !important;
+  font-style: normal;
+  font-weight: 400;
+  padding: 5rem;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+section {
+  margin-bottom: 1rem;
+
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+
+.characteristics-grid {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+
+  .characteristics_input {
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: $white;
+    outline: none;
+    text-align: left;
+    transition: all .25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    width: 3rem;
+
+    &:hover, &:focus {
+      background-color: #fcf5d2;
+      border: 1px solid #fcf5d2;
+      color: #000;
+      outline: none;
+    }
+  }
+
+  li {
+    border: 1px solid #444;
+    margin-left: -1px;
+    padding: 2rem;
+    width: 100%;
+    font-weight: 600;
+    position: relative;
+
+    &.bg-color {
+      background-color: $pink;
+
+      b {
+        color: $white;
+      }
+    }
+
+    b {
+      color: $pink;
+      display: block;
+      font-size: 3rem;
+      font-weight: 900;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+
+.square-section {
+  background-color: #0003;
+  border: 1px solid hsla(0, 0%, 100%, .1);
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 6rem 3rem 3rem;
+  position: relative;
+  width: 100%;
+  font-size: 1.4rem;
+
+  h4 {
+    background-color: $black;
+    color: $pink;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    padding: .6rem .8rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+  }
+}
+
+.listing {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &-item {
+    background-color: #0000001a;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .add-line {
+    display: block;
+    text-align: right;
+    width: 4.5rem;
+    font-weight: 800;
+  }
+}
+
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 132rem;
+}
+
+.form-check-input {
+  appearance: none;
+  background-color: $white;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid #000;
+  flex-shrink: 0;
+  height: 1.6rem;
+  margin-top: .25em;
+  print-color-adjust: exact;
+  vertical-align: top;
+  width: 1.6rem;
+  margin-left: 0;
+  margin-right: 1rem;
+  border-radius: 0;
+  cursor: pointer;
+
+  &:checked[type="checkbox"] {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3E%3C/svg%3E");
+  }
+
+  &:checked {
+    background-color: $pink;
+    border-color: $pink;
+  }
+}

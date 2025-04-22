@@ -1,44 +1,44 @@
 import {useCharacterData} from "~/composables/useCharacterData.js";
 
 export const useCharacteristicsModifiers =  (score) => {
-    let scoreInt = parseInt(score);
+    let scoreInt = ref(parseInt(score));
     if (scoreInt < 1) {
         return 0;
     }
-    if (scoreInt === 1) {
+    if (scoreInt.value === 1) {
         return -5;
     }
-    if (scoreInt === 2 || scoreInt === 3) {
+    if (scoreInt.value === 2 || scoreInt.value === 3) {
         return -4;
     }
-    if (scoreInt === 4 || scoreInt === 5) {
+    if (scoreInt.value === 4 || scoreInt.value === 5) {
         return -3;
     }
-    if (scoreInt === 6 || scoreInt === 7) {
+    if (scoreInt.value === 6 || scoreInt.value === 7) {
         return -2;
     }
-    if (scoreInt === 8 || scoreInt === 9) {
+    if (scoreInt.value === 8 || scoreInt.value === 9) {
         return -1;
     }
-    if (scoreInt === 10 || scoreInt === 11) {
+    if (scoreInt.value === 10 || scoreInt.value === 11) {
         return 0;
     }
-    if (scoreInt === 12 || scoreInt === 13) {
+    if (scoreInt.value === 12 || scoreInt.value === 13) {
         return 1;
     }
-    if (scoreInt === 14 || scoreInt === 15) {
+    if (scoreInt.value === 14 || scoreInt.value === 15) {
         return 2;
     }
-    if (scoreInt === 16 || scoreInt === 17) {
+    if (scoreInt.value === 16 || scoreInt.value === 17) {
         return 3;
     }
-    if (scoreInt === 18 || scoreInt === 19) {
+    if (scoreInt.value === 18 || scoreInt.value === 19) {
         return 4;
     }
-    if (scoreInt === 20 || scoreInt === 21) {
+    if (scoreInt.value === 20 || scoreInt.value === 21) {
         return 5;
     }
-    if (scoreInt > 21) {
+    if (scoreInt.value > 21) {
         return 6;
     }
 }

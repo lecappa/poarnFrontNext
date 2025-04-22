@@ -1,11 +1,13 @@
 <template>
 
-  <section v-if="characteristics">
-    <h3>Jets de sauvegarde</h3>
-    <ul>
+  <section v-if="characteristics" class="square-section">
+    <h4>Jets de sauvegarde</h4>
+    <ul class="listing">
       <li v-for="(carac, key) in characteristics" :key="key">
-        {{ carac.characteristics_name }} -
-        <b>+ {{ isSavingMastered(carac) }}</b>
+        <div class="listing-item">
+          {{ carac.characteristics_name }}
+          <b class="add-line">+ {{ isSavingMastered(carac) }}</b>
+        </div>
       </li>
     </ul>
   </section>
@@ -20,7 +22,7 @@ const isSavingMastered = (carac) => {
   let result = useCharacteristicsModifiers(carac.characteristics_value);
   character_class.forEach((element) => {
     if (element.jetsDeSauvegarde.includes(carac.characteristics_name)) {
-      result = getMasteryBonus() + useCharacteristicsModifiers(carac.characteristics_value) ;
+      result = getMasteryBonus() + useCharacteristicsModifiers(carac.characteristics_value);
     }
   })
   return result

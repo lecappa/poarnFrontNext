@@ -1,4 +1,5 @@
 import classesInfos from "public/classesInfos.json";
+import allSkills from "public/skills.json";
 
 const route = useRoute();
 const {findOne} = useStrapi();
@@ -37,4 +38,26 @@ export const callCharacterData = async () => {
 
 const getFullInfosCLass = (className) => {
     return (classesInfos.filter((i) => i.nom === className));
+}
+
+
+export const getCharacterDataSkills = () => {
+    const data = useCharacterData();
+    let skills = [];
+
+    allSkills.forEach((element) => {
+        const test = data.value.skills.filter((i) => i.name === element.name);
+        let isExpertise = false;
+        if (test.length > 0) {
+            isExpertise = test[0].expertise;
+        }
+        const checkMasterySkill = obj => obj.name === element.name;
+        skills.push({
+            name: element.name,
+            ability: element.ability,
+            mastery : data.value.skills.some(checkMasterySkill),
+            expertise: isExpertise
+        });
+    })
+    return skills;
 }

@@ -3,8 +3,7 @@
     <h3>Classe</h3>
     <ul>
       <li v-for="(classInfos, key) in character_class" :key="key">
-        Classe : {{ classInfos.class_name }} - Niveau : {{ classInfos.class_level }}<br>
-        Dés de vie : {{ classInfos.deVie }} - maitrises : {{ classInfos.maitrises }} - jets de sauvegarde : {{classInfos.jetsDeSauvegarde}}
+        Classe : {{ classInfos.class_name }} - Niveau : {{ classInfos.class_level }} - Dés de vie : {{ classInfos.deVie }}
       </li>
     </ul>
   </section>
