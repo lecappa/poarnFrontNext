@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   strapi: {
     url: 'http://localhost:1337',
     //url:'https://cappa.hd.free.fr',
+    version: 'v5',
     prefix: '/api',
     admin: '/admin',
     cookie: {},

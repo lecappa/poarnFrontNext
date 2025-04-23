@@ -1,12 +1,15 @@
 <template>
   <div class="intro-page">
-    <form>
-      <input type="text" v-model="identifier" class="login-input" placeholder="pseudo">
-      <input type="password" v-model="password" class="login-input" placeholder="Mot de passe">
-      <p class="login-submit-parent">
-        <button type="button" class="login-submit" @click="onSubmit">Connexion</button>
-      </p>
-    </form>
+    <div class="intro-page__inner">
+      <img src="/logo.svg" width="100%" class="mb-5" alt="">
+      <form>
+        <input type="text" v-model="identifier" class="login-input" placeholder="pseudo">
+        <input type="password" v-model="password" class="login-input" placeholder="Mot de passe">
+        <p class="login-submit-parent">
+          <button type="button" class="login-submit" @click="onSubmit">Connexion</button>
+        </p>
+      </form>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

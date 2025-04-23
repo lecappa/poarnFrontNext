@@ -1,7 +1,7 @@
 import classesInfos from "public/classesInfos.json";
 import allSkills from "public/skills.json";
 
-const route = useRoute();
+const user = useStrapiUser();
 const {findOne} = useStrapi();
 export const useCharacterData = () => {
     return useState('characterData', () => [])
@@ -27,13 +27,11 @@ export const getClassSkillsMastery = () => {
     return new Set(skills.flat());
 }
 export const callCharacterData = async () => {
-    const response = await findOne('characters', route.params.id, {
-        populate: [
-            'characteristics', 'informations', 'skills', 'class', 'life_points', 'mastery',
-        ]
+    const response = await findOne('characters', user.value.character_id, {
+        populate: '*'
     });
     const data = useCharacterData();
-    return data.value = response.data[0];
+    return data.value = response.data;
 }
 
 const getFullInfosCLass = (className) => {
@@ -55,7 +53,7 @@ export const getCharacterDataSkills = () => {
         skills.push({
             name: element.name,
             ability: element.ability,
-            mastery : data.value.skills.some(checkMasterySkill),
+            mastery: data.value.skills.some(checkMasterySkill),
             expertise: isExpertise
         });
     })

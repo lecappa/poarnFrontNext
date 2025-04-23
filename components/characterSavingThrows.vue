@@ -1,15 +1,18 @@
 <template>
 
   <section v-if="characteristics" class="square-section">
-    <h4>Jets de sauvegarde</h4>
-    <ul class="listing">
-      <li v-for="(carac, key) in characteristics" :key="key">
-        <div class="listing-item">
-          {{ carac.characteristics_name }}
-          <b class="add-line">+ {{ isSavingMastered(carac) }}</b>
-        </div>
-      </li>
-    </ul>
+    <div class="square-section__header">
+      <h4>Jets de sauvegarde</h4>
+    </div>
+
+      <ul class="listing">
+        <li v-for="(carac, key) in characteristics" :key="key">
+          <div class="listing-item">
+            {{ carac.characteristics_name }}
+            <b class="add-line">+ {{ isSavingMastered(carac) }}</b>
+          </div>
+        </li>
+      </ul>
   </section>
 </template>
 <script setup lang="js">

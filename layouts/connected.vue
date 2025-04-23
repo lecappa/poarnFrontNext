@@ -28,7 +28,5 @@ const disconnection = () => {
   router.push('/')
 }
 
-await callCharacterData();
-getClassSkills();
 
 </script>

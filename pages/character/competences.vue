@@ -13,4 +13,7 @@ definePageMeta({
   middleware: 'auth',
   layout: 'connected'
 })
+
+await callCharacterData();
+getClassSkills();
 </script>
