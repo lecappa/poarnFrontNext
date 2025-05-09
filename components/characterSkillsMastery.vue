@@ -17,7 +17,7 @@
     <p class="listing-item">
       <input v-model="addMastery.name" class="input input-invisible" placeholder="Nouvelle maitrise">
       <span>
-          <button class="btn btn-small" @click="classSkillsMasteryAdd">↻</button>
+          <button class="btn btn-small" @click="classSkillsMasteryAdd">Ajouter</button>
         </span>
     </p>
   </section>

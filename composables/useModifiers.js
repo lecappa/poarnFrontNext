@@ -1,6 +1,7 @@
 import {useCharacterData} from "~/composables/useCharacterData.js";
+import {ref} from "vue";
 
-export const useCharacteristicsModifiers =  (score) => {
+export const useCharacteristicsModifiers = (score) => {
     let scoreInt = ref(parseInt(score));
     if (scoreInt < 1) {
         return 0;
@@ -45,12 +46,12 @@ export const useCharacteristicsModifiers =  (score) => {
 
 export const getMasteryBonus = () => {
     const data = useCharacterData();
-    const level  = ref(data.value.informations.main_level);
+    const level = ref(data.value.informations.main_level);
 
-    if (level.value >= 1 && level.value<= 4) {
+    if (level.value >= 1 && level.value <= 4) {
         return 2;
     }
-    if (level.value>= 5 && level.value <= 8) {
+    if (level.value >= 5 && level.value <= 8) {
         return 3;
     }
     if (level.value >= 9 && level.value <= 12) {
@@ -65,4 +66,12 @@ export const getMasteryBonus = () => {
     if (level.value > 20) {
         return 7;
     }
+}
+
+
+export const useUnityCharacteristicsModifiers = (slug) => {
+    const data = useCharacterData();
+    const characteristics = ref(data.value.characteristics);
+    const specificCarac = ref(data.value.characteristics.filter((i) => i.characteristics_slug === slug));
+    return useCharacteristicsModifiers(specificCarac.value[0].characteristics_value);
 }

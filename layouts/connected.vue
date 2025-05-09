@@ -10,6 +10,9 @@
       <li>
         <nuxt-link to="competences">Compétences</nuxt-link>
       </li>
+      <li>
+        <nuxt-link to="equipements">Combats</nuxt-link>
+      </li>
     </ul>
   </nav>
   <div class="container">

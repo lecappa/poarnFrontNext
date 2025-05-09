@@ -16,7 +16,7 @@
         </li>
         <li class="bg-color">
           <span>Classe d'armure</span>
-          <b>13</b>
+          <b> {{ useCharacterCA()['score'] }}</b>
         </li>
       </ul>
   </section>
@@ -26,7 +26,6 @@ const data = useCharacterData();
 const characteristics = ref(data.value.characteristics);
 const {update} = useStrapi();
 const changeObject = ref(false);
-
 
 const updateData = async () => {
   await update('characters', data.value.documentId, {

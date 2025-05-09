@@ -7,16 +7,16 @@
 
     <ul class="listing">
       <li class="listing-item">
-        Joueur  <input type="text" class="invisible_input" v-model="information.player" @change="changeObject=true">
+        Joueur  <input type="text" class="invisible_input" v-model="information.player" @input="changeObject=true">
       </li>
       <li class="listing-item">
-        Nom  <input type="text" class="invisible_input" v-model="information.name" @change="changeObject=true">
+        Nom  <input type="text" class="invisible_input" v-model="information.name" @input="changeObject=true">
       </li>
       <li class="listing-item">
-        Race <input type="text" class="invisible_input" v-model="information.race" @change="changeObject=true">
+        Race <input type="text" class="invisible_input" v-model="information.race" @input="changeObject=true">
       </li>
       <li class="listing-item">
-        Niveau global <input type="number" min="1" max="23" class="invisible_input" v-model="information.main_level" @change="changeObject=true">
+        Niveau global <input type="number" min="1" max="23" class="invisible_input" v-model="information.main_level" @input="changeObject=true">
       </li>
     </ul>
   </section>
