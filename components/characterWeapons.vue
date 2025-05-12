@@ -9,21 +9,23 @@
         <thead>
         <tr>
           <th scope="col">Nom</th>
+          <th scope="col">charac.</th>
           <th scope="col">Bonus</th>
+          <th scope="col">Jet d'attaque</th>
           <th scope="col">Dégats</th>
-          <th scope="col">Note</th>
           <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="(weapon, key) in character_weapons" :key="key">
           <td>{{ weapon.name }}</td>
+          <td style="width: 1rem;text-transform: uppercase;">{{weapon.characteristic}}</td>
           <td style="width: 2rem;">
-            <template v-if="!weapon.bonus">-</template>
-            <template v-else>{{ weapon.bonus }}</template>
+            <template v-if="!weapon.bonus">+0</template>
+            <template v-else>+{{ weapon.bonus }}</template>
           </td>
-          <td>{{ weapon.damage }}</td>
-          <td>{{ weapon.note }}</td>
+          <td> d20 + {{getAttack(weapon)}}</td>
+          <td>{{getDamage(weapon)}}</td>
           <td style="width: 3rem;">
             <button class="btn btn-small btn-transparent" @click="weaponEdit(weapon)">&hellip;</button>
             <button class="btn btn-small btn-transparent" @click="weaponDelete(weapon.id)">×</button>
@@ -57,7 +59,7 @@
           </div>
         </section>
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-6">
             <div class="form-control">
               <label class="small-label">Nom de l'arme</label>
               <input class="input" type="text" v-model="addWeapon.name">
@@ -65,7 +67,16 @@
           </div>
           <div class="col-lg-6">
             <div class="form-control">
-              <label class="small-label">Dégat</label>
+              <label class="small-label">charactéristiquer</label>
+              <select class="input select" v-model="addWeapon.characteristic">
+                <option value="for">For</option>
+                <option value="dex">Dex</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-control">
+              <label class="small-label">Dégat (sans modif.)</label>
               <input class="input" type="text" v-model="addWeapon.damage">
             </div>
           </div>
@@ -115,6 +126,18 @@ const addWeapon = ref({
   bonus: 0,
 });
 
+const getAttack = (weapon) => {
+  const characteristic = weapon.characteristic;
+  const bonus = weapon.bonus;
+  return getMasteryBonus() + useUnityCharacteristicsModifiers(characteristic) + bonus
+}
+
+const getDamage = (weapon) => {
+  const characteristic = weapon.characteristic;
+  const bonus = weapon.bonus;
+  return weapon.damage + ' + '+  (useUnityCharacteristicsModifiers(characteristic) + bonus)
+}
+
 const filterWeapon = computed(() => {
   if (searchWeapon.value === '') {
     return []
@@ -130,6 +153,7 @@ const filterWeapon = computed(() => {
     }
   })
 });
+
 
 const newWeapon = (i) => {
   if (!i.bonus) {
@@ -171,7 +195,7 @@ const updateWeapon = async () => {
 
 const updateData = async () => {
   await update('characters', data.value.documentId, {
-    weapons: character_weapons.value.map(({name, bonus, damage, note}) => ({name, bonus, damage, note}))
+    weapons: character_weapons.value.map(({name, bonus, damage, note, characteristic}) => ({name, bonus, damage, note, characteristic}))
   });
 }
 </script>

@@ -16,12 +16,32 @@
         Race <input type="text" class="invisible_input" v-model="information.race" @input="changeObject=true">
       </li>
       <li class="listing-item">
+        Alignement <input type="text" class="invisible_input" v-model="information.alignment" @input="changeObject=true">
+      </li>
+    </ul>
+  <br>
+    <ul class="listing">
+      <li class="listing-item">
+        Sagesse passive  <span>{{10 + useUnityCharacteristicsModifiers('sag')}}</span>
+      </li>
+      <li class="listing-item">
+        Initiative <span>D20 + {{useUnityCharacteristicsModifiers('dex')}}</span>
+      </li>
+      <li class="listing-item">
+        Vitesse <input type="number" min="1" max="23" class="invisible_input" v-model="information.speed" @input="changeObject=true">
+      </li>
+      <br>
+    </ul>
+    <ul class="listing">
+      <li class="listing-item">
         Niveau global <input type="number" min="1" max="23" class="invisible_input" v-model="information.main_level" @input="changeObject=true">
       </li>
     </ul>
   </section>
 </template>
 <script setup lang="js">
+import {useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
+
 const data = useCharacterData();
 const information = ref(data.value.informations);
 const {update} = useStrapi();

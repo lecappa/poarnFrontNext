@@ -1,5 +1,4 @@
 [
-  // Armes courantes de corps à corps
   {
     name: 'Bâton',
     category: 'Armes courantes de corps à corps',
@@ -261,7 +260,6 @@
 ];
 
 export const armors= [
-// Armures légères
 {
 name: 'Matelassée',
 category: 'Armures légères',

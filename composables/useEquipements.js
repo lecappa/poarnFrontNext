@@ -1,5 +1,4 @@
 export const weapons= [
-    // Armes courantes de corps à corps
     {
         name: 'Bâton',
         category: 'Armes courantes de corps à corps',
@@ -7,7 +6,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'contondant',
         weight: '1,8 kg',
-        properties: ['polyvalent (1d8)']
+        properties: ['polyvalent (1d8)'],
+        characteristic: 'dex'
     },
     {
         name: 'Dague',
@@ -16,7 +16,8 @@ export const weapons= [
         damage: '1d4',
         damageType: 'perforant',
         weight: '0,5 kg',
-        properties: ['finesse', 'légère', 'lancer (6/18)']
+        properties: ['finesse', 'légère', 'lancer (6/18)'],
+        characteristic: 'dex'
     },
     {
         name: 'Gourdin',
@@ -25,7 +26,8 @@ export const weapons= [
         damage: '1d4',
         damageType: 'contondant',
         weight: '1 kg',
-        properties: ['légère']
+        properties: ['légère'],
+        characteristic: 'for'
     },
     {
         name: 'Hachette',
@@ -34,7 +36,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'tranchant',
         weight: '1 kg',
-        properties: ['légère', 'lancer (6/18)']
+        properties: ['légère', 'lancer (6/18)'],
+        characteristic: 'for'
     },
     {
         name: 'Javeline',
@@ -43,7 +46,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'perforant',
         weight: '1 kg',
-        properties: ['lancer (9/36)']
+        properties: ['lancer (9/36)'],
+        characteristic: 'dex'
     },
     {
         name: 'Lance',
@@ -52,7 +56,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'perforant',
         weight: '1,5 kg',
-        properties: ['lancer (6/18)', 'polyvalent (1d8)']
+        properties: ['lancer (6/18)', 'polyvalent (1d8)'],
+        characteristic: 'dex',
     },
     {
         name: 'Marteau léger',
@@ -61,7 +66,8 @@ export const weapons= [
         damage: '1d4',
         damageType: 'contondant',
         weight: '1 kg',
-        properties: ['légère', 'lancer (6/18)']
+        properties: ['légère', 'lancer (6/18)'],
+        characteristic: 'for'
     },
     {
         name: 'Massue',
@@ -70,7 +76,8 @@ export const weapons= [
         damage: '1d8',
         damageType: 'contondant',
         weight: '5 kg',
-        properties: []
+        properties: [],
+        characteristic: 'for'
     },
 
     // Armes courantes à distance
@@ -81,7 +88,8 @@ export const weapons= [
         damage: '1d8',
         damageType: 'perforant',
         weight: '2,5 kg',
-        properties: ['munition (24/96)', 'chargement', 'deux mains']
+        properties: ['munition (24/96)', 'chargement', 'deux mains'],
+        characteristic: 'dex'
     },
     {
         name: 'Arc court',
@@ -90,7 +98,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'perforant',
         weight: '1 kg',
-        properties: ['munition (24/96)', 'deux mains']
+        properties: ['munition (24/96)', 'deux mains'],
+        characteristic: 'dex'
     },
     {
         name: 'Fléchette',
@@ -99,7 +108,8 @@ export const weapons= [
         damage: '1d4',
         damageType: 'perforant',
         weight: '0,1 kg',
-        properties: ['finesse', 'lancer (6/18)']
+        properties: ['finesse', 'lancer (6/18)'],
+        characteristic: 'dex'
     },
     {
         name: 'Fronde',
@@ -108,7 +118,8 @@ export const weapons= [
         damage: '1d4',
         damageType: 'contondant',
         weight: '0 kg',
-        properties: ['munition (9/36)']
+        properties: ['munition (9/36)'],
+        characteristic: 'dex'
     },
 
     // Armes de guerre de corps à corps
@@ -119,7 +130,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'tranchant',
         weight: '1,5 kg',
-        properties: ['finesse', 'légère']
+        properties: ['finesse', 'légère'],
+        characteristic: 'dex'
     },
     {
         name: 'Épée à deux mains',
@@ -128,7 +140,8 @@ export const weapons= [
         damage: '2d6',
         damageType: 'tranchant',
         weight: '3 kg',
-        properties: ['lourde', 'deux mains']
+        properties: ['lourde', 'deux mains'],
+        characteristic: 'for'
     },
     {
         name: 'Épée courte',
@@ -137,7 +150,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'perforant',
         weight: '1 kg',
-        properties: ['finesse', 'légère']
+        properties: ['finesse', 'légère'],
+        characteristic: 'dex'
     },
     {
         name: 'Épée longue',
@@ -146,7 +160,8 @@ export const weapons= [
         damage: '1d8',
         damageType: 'tranchant',
         weight: '1,5 kg',
-        properties: ['polyvalent (1d10)']
+        properties: ['polyvalent (1d10)'],
+        characteristic: 'for'
     },
     {
         name: 'Fléau',
@@ -155,7 +170,9 @@ export const weapons= [
         damage: '1d8',
         damageType: 'contondant',
         weight: '1 kg',
-        properties: []
+        properties: [],
+        characteristic: 'for'
+
     },
     {
         name: 'Hache d\'armes',
@@ -164,7 +181,8 @@ export const weapons= [
         damage: '1d8',
         damageType: 'tranchant',
         weight: '2 kg',
-        properties: ['polyvalent (1d10)']
+        properties: ['polyvalent (1d10)'],
+        characteristic: 'for'
     },
     {
         name: 'Hallebarde',
@@ -173,7 +191,8 @@ export const weapons= [
         damage: '1d10',
         damageType: 'tranchant',
         weight: '3 kg',
-        properties: ['lourde', 'allonge', 'deux mains']
+        properties: ['lourde', 'allonge', 'deux mains'],
+        characteristic: 'for'
     },
     {
         name: 'Lance d\'arçon',
@@ -182,7 +201,8 @@ export const weapons= [
         damage: '1d12',
         damageType: 'perforant',
         weight: '3 kg',
-        properties: ['allonge', 'spéciale']
+        properties: ['allonge', 'spéciale'],
+        characteristic: 'for'
     },
     {
         name: 'Marteau de guerre',
@@ -191,7 +211,8 @@ export const weapons= [
         damage: '1d8',
         damageType: 'contondant',
         weight: '1 kg',
-        properties: ['polyvalent (1d10)']
+        properties: ['polyvalent (1d10)'],
+        characteristic: 'for'
     },
     {
         name: 'Pique',
@@ -200,7 +221,8 @@ export const weapons= [
         damage: '1d10',
         damageType: 'perforant',
         weight: '9 kg',
-        properties: ['lourde', 'allonge', 'deux mains']
+        properties: ['lourde', 'allonge', 'deux mains'],
+        characteristic: 'for'
     },
     {
         name: 'Rapière',
@@ -209,7 +231,8 @@ export const weapons= [
         damage: '1d8',
         damageType: 'perforant',
         weight: '1 kg',
-        properties: ['finesse']
+        properties: ['finesse'],
+        characteristic: 'dex'
     },
     {
         name: 'Trident',
@@ -218,7 +241,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'perforant',
         weight: '2 kg',
-        properties: ['lancer (6/18)', 'polyvalent (1d8)']
+        properties: ['lancer (6/18)', 'polyvalent (1d8)'],
+        characteristic: 'for'
     },
 
     // Armes de guerre à distance
@@ -229,7 +253,8 @@ export const weapons= [
         damage: '1d6',
         damageType: 'perforant',
         weight: '1,5 kg',
-        properties: ['munition (9/36)', 'chargement', 'légère']
+        properties: ['munition (9/36)', 'chargement', 'légère'],
+        characteristic: 'dex'
     },
     {
         name: 'Arbalète lourde',
@@ -238,7 +263,8 @@ export const weapons= [
         damage: '1d10',
         damageType: 'perforant',
         weight: '9 kg',
-        properties: ['munition (30/120)', 'chargement', 'lourde', 'deux mains']
+        properties: ['munition (30/120)', 'chargement', 'lourde', 'deux mains'],
+        characteristic: 'dex'
     },
     {
         name: 'Arc long',
@@ -247,7 +273,8 @@ export const weapons= [
         damage: '1d8',
         damageType: 'perforant',
         weight: '1 kg',
-        properties: ['munition (45/180)', 'lourde', 'deux mains']
+        properties: ['munition (45/180)', 'lourde', 'deux mains'],
+        characteristic: 'dex'
     },
     {
         name: 'Filet',
@@ -256,11 +283,11 @@ export const weapons= [
         damage: '0',
         damageType: '-',
         weight: '1,5 kg',
-        properties: ['spéciale', 'lancer (1,5/4,5)']
+        properties: ['spéciale', 'lancer (1,5/4,5)'],
+        characteristic: 'dex'
     }
 ];
 export const armors= [
-    // Armures légères
     {
         name: 'Matelassée',
         category: 'Armures légères',

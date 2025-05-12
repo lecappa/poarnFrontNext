@@ -9,7 +9,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Athlétisme", "Dressage", "Intimidation", "Nature", "Perception", "Survie"]
-        }
+        },
+        "sort": ""
     },
     {
         "nom": "Barde",
@@ -20,7 +21,8 @@
         "competences": {
             "nombre": 3,
             "liste": ["Acrobaties", "Arcanes", "Athlétisme", "Discrétion", "Histoire", "Intimidation", "Investigation", "Médecine", "Nature", "Perception", "Persuasion", "Religion", "Représentation", "Supercherie"]
-        }
+        },
+        "sort": "cha"
     },
     {
         "nom": "Clerc",
@@ -31,7 +33,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Histoire", "Médecine", "Perspicacité", "Persuasion", "Religion"]
-        }
+        },
+        "sort": "sag"
     },
     {
         "nom": "Druide",
@@ -42,7 +45,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Arcanes", "Dressage", "Médecine", "Nature", "Perception", "Perspicacité", "Religion", "Survie"]
-        }
+        },
+        "sort": "sag"
     },
     {
         "nom": "Ensorceleur",
@@ -53,7 +57,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Arcanes", "Intimidation", "Perspicacité", "Persuasion", "Religion", "Supercherie"]
-        }
+        },
+        "sort": "cha"
     },
     {
         "nom": "Guerrier",
@@ -64,7 +69,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Acrobaties", "Athlétisme", "Dressage", "Histoire", "Intimidation", "Perception", "Perspicacité", "Survie"]
-        }
+        },
+        "sort": ""
     },
     {
         "nom": "Magicien",
@@ -75,7 +81,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Arcanes", "Histoire", "Investigation", "Médecine", "Perspicacité", "Religion"]
-        }
+        },
+        "sort": "int"
     },
     {
         "nom": "Moine",
@@ -86,7 +93,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Acrobaties", "Athlétisme", "Discrétion", "Histoire", "Perspicacité", "Religion"]
-        }
+        },
+        "sort": "sag"
     },
     {
         "nom": "Paladin",
@@ -97,7 +105,8 @@
         "competences": {
             "nombre": 2,
             "liste": ["Athlétisme", "Intimidation", "Médecine", "Perspicacité", "Persuasion", "Religion"]
-        }
+        },
+        "sort": "cha"
     },
     {
         "nom": "Rôdeur",
@@ -108,7 +117,8 @@
         "competences": {
             "nombre": 3,
             "liste": ["Athlétisme", "Discrétion", "Dressage", "Investigation", "Nature", "Perception", "Perspicacité", "Survie"]
-        }
+        },
+        "sort": "sag"
     },
     {
         "nom": "Roublard",
@@ -119,7 +129,8 @@
         "competences": {
             "nombre": 4,
             "liste": ["Acrobaties", "Athlétisme", "Discrétion", "Escamotage", "Intimidation", "Investigation", "Perception", "Perspicacité", "Persuasion", "Représentation", "Supercherie"]
-        }
+        },
+        "sort": ""
     },
     {
         "nom": "Sorcier",
@@ -130,6 +141,7 @@
         "competences": {
             "nombre": 2,
             "liste": ["Arcanes", "Histoire", "Investigation", "Nature", "Religion", "Supercherie"]
-        }
+        },
+        "sort": "cha"
     }
 ]

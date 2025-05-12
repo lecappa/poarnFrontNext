@@ -1,4 +1,5 @@
 <template>
+  <character-fight-infos></character-fight-infos>
   <character-weapons></character-weapons>
   <character-armors></character-armors>
 </template>

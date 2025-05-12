@@ -11,7 +11,7 @@
         <nuxt-link to="/character/competences">Compétences</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/character/equipements">Equipement</nuxt-link>
+        <nuxt-link to="/character/combats">Combats</nuxt-link>
       </li>
       <li>
         <nuxt-link to="/character/possessions">Possessions</nuxt-link>
