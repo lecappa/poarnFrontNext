@@ -1,7 +1,7 @@
 <template>
   <section class="square-section" v-if="data">
     <div class="square-section__header">
-      <h4>Possessions</h4>
+      <h4>Objets</h4>
     </div>
     <ul class="listing">
       <li v-for="(item, key) in possessions" :key="key" class="listing-item">
@@ -15,7 +15,7 @@
     </ul>
     <br>
     <p class="text-right">
-      <button class="btn" @click="[openClassDialog=true,addItem=[] ]">Ajouter une possession</button>
+      <button class="btn" @click="[openClassDialog=true,addItem=[] ]">Ajouter</button>
     </p>
   </section>
 
