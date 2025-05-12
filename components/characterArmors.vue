@@ -40,8 +40,8 @@
           </td>
         </tr>
         <tr class="total">
-          <td><big>{{ useCharacterCA()['score']}} </big></td>
-          <td>{{ useCharacterCA()['type']}} <b>{{ useCharacterCA()['score']}} </b> <small>({{ useCharacterCA()['note']}})</small></td>
+          <td>Total CA : <big>{{ useCharacterCA()['score']}} </big></td>
+          <td><small>{{ useCharacterCA()['note']}}</small></td>
         </tr>
         </tbody>
       </table>

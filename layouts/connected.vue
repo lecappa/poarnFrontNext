@@ -2,16 +2,22 @@
   <nav class="main-nav">
     <ul role="menu">
       <li>
-        <nuxt-link to="informations">Général</nuxt-link>
+        <nuxt-link to="/character/informations">Général</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="fiche">Fiche</nuxt-link>
+        <nuxt-link to="/character/fiche">Fiche</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="competences">Compétences</nuxt-link>
+        <nuxt-link to="/character/competences">Compétences</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="equipements">Combats</nuxt-link>
+        <nuxt-link to="/character/equipements">Equipement</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/character/possessions">Possessions</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/character/spells">Sorts</nuxt-link>
       </li>
     </ul>
   </nav>

@@ -23,8 +23,6 @@
   </section>
 </template>
 <script setup lang="js">
-
-const openClassDialog = ref(false);
 const data = useCharacterData();
 const otherClassSkillsMastery = ref(data.value.mastery);
 const classSkillsMastery = getClassSkillsMastery();

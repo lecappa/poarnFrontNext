@@ -1,7 +1,7 @@
 import classesInfos from "public/classesInfos.json";
 import allSkills from "public/skills.json";
 import {ref} from "vue";
-import {useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
+import {getMasteryBonus, useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
 
 const user = useStrapiUser();
 const {findOne} = useStrapi();
@@ -72,31 +72,26 @@ export const useCharacterCA = () => {
         (accumulator, currentValue) => accumulator + parseInt(currentValue.indice), initialValue,
     );
 
-    let CA_result = {
-        score: 0,
-        note: '',
-        type: 'Sans Armure'
-    };
+    let CA_result = {};
 
     if (isMonk.length > 0) {
         CA_result = {
             score: useUnityCharacteristicsModifiers('dex') + 10 + useUnityCharacteristicsModifiers('sag'),
-            note: '10 + Mod. Dex + mod. Sag',
+            note: '10 + Sag (' + useUnityCharacteristicsModifiers('sag')+ ') + Dex(' + useUnityCharacteristicsModifiers('dex') + ')',
             type: 'Moine :',
         }
     } else if (character_armors.value.length === 0) {
         CA_result = {
             score: useUnityCharacteristicsModifiers('dex') + 10,
-            note: '10 + mod. Dex',
+            note: '10 + Dex(' + useUnityCharacteristicsModifiers('dex') + ')',
             type: 'Sans armure :',
         }
     } else {
         CA_result = {
             score: sumWithInitial + useUnityCharacteristicsModifiers('dex'),
-            note: 'Addition des bonus + mod. de Dex',
+            note: 'Armures ('+sumWithInitial + ') + Dex(' + useUnityCharacteristicsModifiers('dex') + ')',
             type: 'Total CA :',
         }
     }
-
     return CA_result;
 }

@@ -2,6 +2,7 @@
   <section class="square-section">
     <div class="square-section__header">
       <h4>Classe</h4>
+      <button class="btn btn-small" @click="updateData()" v-if="changeObject">Valider</button>
     </div>
 
     <section v-for="(classInfos, key) in character_class" :key="key" class="square-section simple">
@@ -21,10 +22,10 @@
         </li>
         <li class="listing-item">
           Niveau
-          <input type="number" v-model="classInfos.class_level" class="invisible_input">
+          <input type="number" v-model="classInfos.class_level" class="invisible_input" @input="changeObject=true">
         </li>
         <li class="listing-item">
-          Sous classe <input type="text" class="invisible_input" v-model="classInfos.class_sub" placeholder="|">
+          Sous classe <input type="text" class="invisible_input" v-model="classInfos.class_sub" placeholder="|" @input="changeObject=true">
         </li>
       </ul>
     </section>
@@ -64,7 +65,7 @@ const {update} = useStrapi();
 const data = useCharacterData();
 const character_class = ref(data.value.class);
 const openClassDialog = ref(false);
-
+const changeObject = ref(false);
 const addClass = reactive({
   class_name: ""
 })
