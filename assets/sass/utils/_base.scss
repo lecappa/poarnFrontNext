@@ -1,0 +1,26 @@
+@use "../abstract/index" as *;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #1e272c;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 5rem;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+
+  @media (max-width: $sm) {
+    padding: 2rem;
+  }
+}
+
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}

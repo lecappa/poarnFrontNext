@@ -1,0 +1,55 @@
+@use "../abstract/index" as *;
+
+.table-ui {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  font-size: 1.6rem;
+
+  thead th {
+    background-color: transparent;
+    border: none;
+    color: #ec2e4a;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 1rem .5rem;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  tbody tr {
+    background-color: #0000001a;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    vertical-align: middle;
+    white-space: nowrap;
+
+    td {
+      border-right: 1px solid hsla(0, 0%, 100%, .1);
+      padding: 1rem;
+    }
+  }
+
+  .total td {
+    background-color: $green;
+    color: $white;
+
+    b {
+      font-weight: 600;
+    }
+
+    small {
+      font-size: 1.4rem;
+    }
+
+    big {
+      font-weight: 900;
+    }
+  }
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

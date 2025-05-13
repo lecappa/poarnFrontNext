@@ -1,0 +1,40 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.text-primary {
+  color: $green;
+}
+
+.bg-primary {
+  background-color: $green !important;
+}
+
+.big-text {
+  font-size: 1.8rem;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+section {
+  margin-bottom: 1rem;
+
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.text-right {
+  text-align: right;
+}

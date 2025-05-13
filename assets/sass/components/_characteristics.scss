@@ -1,0 +1,63 @@
+@use "../abstract/index" as *;
+
+.characteristics-grid {
+  @include flex-between;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+
+  .characteristics_input {
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: $white;
+    outline: none;
+    text-align: left;
+    transition: all .25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    width: 3rem;
+    display: block;
+    margin: 0 auto;
+
+    &:hover, &:focus {
+      background-color: #fcf5d2;
+      border: 1px solid #fcf5d2;
+      color: #000;
+      outline: none;
+    }
+  }
+
+  li {
+    border: 1px solid #37474f;
+    margin-left: -1px;
+    padding: 2rem;
+    width: 100%;
+    font-weight: 600;
+    position: relative;
+
+    &.bg-color {
+      background-color: $green;
+
+      b {
+        color: $white;
+      }
+    }
+
+    b {
+      color: $white;
+      display: block;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+  }
+
+}
