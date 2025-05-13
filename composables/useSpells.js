@@ -1,7 +1,8 @@
 import jsonSpells from '../public/sorts.json';
-import { ref } from 'vue';
+import {ref} from 'vue';
+import {useCharacterData} from "~/composables/useCharacterData.js";
 
-export function useSpells() {
+export const useSpells = () => {
     const allSpellsData = ref(jsonSpells.Spells);
 
     const allSpells = () => {
@@ -27,4 +28,28 @@ export function useSpells() {
         getSpellsByClass,
         getAllClasses
     }
+}
+
+export const canUseMagic = () => {
+    const data = useCharacterData();
+    const characterClass = data.value.class;
+    const magicClass = {
+        barde: 'cha',
+        clerc: 'sag',
+        druide: 'sag',
+        ensorceleur: 'cha',
+        magicien: 'int',
+        occultiste: 'cha',
+        paladin: 'cha',
+        rôdeur: 'sag',
+        artificier: 'int'
+    };
+    for (const classe of characterClass) {
+        const className = classe.class_name?.toLowerCase();
+        if (magicClass[className]) {
+            const caracteristique = magicClass[className];
+            return [true, classe.class_name, caracteristique];
+        }
+    }
+    return [false, null]
 }

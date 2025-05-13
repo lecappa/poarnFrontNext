@@ -16,8 +16,11 @@
       <li>
         <nuxt-link to="/character/possessions">Possessions</nuxt-link>
       </li>
-      <li>
+      <li v-if="magicClass[0]">
         <nuxt-link to="/character/spells">Sorts</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/character/notes">Notes</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -37,5 +40,7 @@ const disconnection = () => {
   router.push('/')
 }
 
-
+await callCharacterData();
+getClassSkills();
+const magicClass = useState('magicClass', () => canUseMagic());
 </script>

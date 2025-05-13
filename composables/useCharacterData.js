@@ -1,15 +1,14 @@
 import classesInfos from "public/classesInfos.json";
 import allSkills from "public/skills.json";
 import {ref} from "vue";
-import {getMasteryBonus, useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
+import {useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
 
 const user = useStrapiUser();
 const {findOne} = useStrapi();
+
 export const useCharacterData = () => {
     return useState('characterData', () => [])
 }
-
-
 export const getClassSkills = () => {
     const data = useCharacterData();
     return data.value.class.forEach((element) => {

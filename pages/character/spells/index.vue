@@ -1,4 +1,18 @@
 <template>
+  <div class="square-section tiny">
+    <div class="row listing">
+      <div class="col-lg-6">
+        <div class="listing-item">
+          Jet de sauvegarde des sorts : <b>{{spellSaveDC()}}</b>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="listing-item">
+          Attaques avec un sort : <b>d20 + {{spellAttackMod()}}</b>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="spells-navigation square-section" id="search">
     <div class="square-section__header"><h4>Filtres</h4><!--v-if--></div>
     <div class="spells-navigation__search">
@@ -113,13 +127,13 @@
 
 <script lang="js" setup>
 await callCharacterData();
-import {useSpells} from '@/composables/useSpells.js';
-
+import {useSpells, canUseMagic} from '@/composables/useSpells.js';
+const magicClass = useState('magicClass', () => canUseMagic());
 const data = useCharacterData();
 const character_spells = ref(data.value.spells);
 const {update} = useStrapi();
 const {getSpellsByClass, getAllClasses} = useSpells();
-const selectedClass = ref('Barde');
+const selectedClass = ref(magicClass.value[1]);
 const allClasses = getAllClasses();
 const openClassDialog = ref(false);
 const selectedSpell = ref([]);
@@ -132,7 +146,6 @@ definePageMeta({
   middleware: 'auth',
   layout: 'connected'
 })
-
 
 const showSpell = (i) => {
   selectedSpell.value = i;
@@ -188,7 +201,7 @@ const addSpellToList = async (id) => {
 
   if (!alreadyExists) {
     character_spells.value.push({spellId: spell_id});
-    updateData();
+    await updateData();
   }
 }
 
@@ -202,5 +215,14 @@ const updateData = async () => {
   await update('characters', data.value.documentId, {
     spells: character_spells.value.map(({spellId}) => ({spellId}))
   });
+}
+
+
+
+const spellSaveDC = () => {
+  return 8 + getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]);
+}
+const spellAttackMod = () => {
+  return getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]);
 }
 </script>

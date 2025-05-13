@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/strapi', '@nuxt/icon'],
+  modules: ['@nuxtjs/strapi', '@nuxt/icon', 'nuxt-tiptap-editor'],
   ssr: false,
   devtools: {enabled: true},
 
@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'fr',
       },
-      title: 'PAORN : La chronique du chaos',
+      title: 'PAORN',
       charset: 'utf-8',
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

@@ -10,7 +10,6 @@
 </template>
 
 <script lang="js" setup>
-await callCharacterData();
 definePageMeta({
   middleware: 'auth',
   layout: 'connected'

@@ -10,7 +10,7 @@
       <li v-for="(info, key) in otherClassSkillsMastery" :key="key" class="listing-item">
         {{ info.name }}
         <span>
-          <button class="btn btn-small" @click="classSkillsMasteryDelete(info.id)">×</button>
+          <button class="btn btn-small btn-transparent" @click="classSkillsMasteryDelete(info.id)">×</button>
         </span>
       </li>
     </ul>
