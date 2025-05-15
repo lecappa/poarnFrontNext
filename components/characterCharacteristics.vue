@@ -16,12 +16,13 @@
         </li>
         <li class="bg-color">
           <span>Classe d'armure</span>
-          <b> {{ useCharacterCA()['score'] }}</b>
+          <b> {{ getCA()['score'] }}</b>
         </li>
       </ul>
   </section>
 </template>
 <script setup lang="js">
+const {useCharacterData, getCA} = useCharacter();
 const data = useCharacterData();
 const characteristics = ref(data.value.characteristics);
 const {update} = useStrapi();

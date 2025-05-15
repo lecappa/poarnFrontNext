@@ -1,6 +1,7 @@
 import jsonSpells from '../public/sorts.json';
 import {ref} from 'vue';
-import {useCharacterData} from "~/composables/useCharacterData.js";
+const {useCharacterData} = useCharacter();
+
 
 export const useSpells = () => {
     const allSpellsData = ref(jsonSpells.Spells);

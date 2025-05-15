@@ -30,26 +30,16 @@
     </ul>
   </section>
 
-  <template v-if="displayBubble">
-    <div class="bubble-box">
-      <div class="bubble-box__content">
-        <button @click="closeBubble()">×</button>
-        <h4>{{ bubbleText.name }}</h4>
-        <p>{{ bubbleText.description }}</p>
-      </div>
-    </div>
-  </template>
-
 </template>
 <script lang="js" setup>
+const {useCharacterData, getSkills} = useCharacter();
+const {update} = useStrapi();
 const data = useCharacterData();
-const data_skills = ref(getCharacterDataSkills());
+const data_skills = ref(getSkills());
 const characteristics = ref(data.value.characteristics);
 const capacities = ref(data.value.capacities);
 const changeObject = ref(false);
-const {update} = useStrapi();
-const displayBubble = ref(false);
-const bubbleText = ref();
+
 const skillModifier = (skill) => {
   const carac = characteristics.value.filter((i) => i.characteristics_slug === skill.ability);
 
@@ -77,15 +67,5 @@ const updateData = async () => {
     skills: result.map(({name, expertise}) => ({name, expertise}))
   });
   changeObject.value = false;
-}
-
-const openBubble = (i) => {
-  displayBubble.value = true;
-  bubbleText.value = i;
-}
-
-const closeBubble = () => {
-  displayBubble.value = false;
-  bubbleText.value = null;
 }
 </script>

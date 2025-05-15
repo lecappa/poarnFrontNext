@@ -3,6 +3,8 @@
     <div class="square-section__header">
       <h4>Compétences maitrisées</h4>
     </div>
+
+   <pre>{{getClassSkillsMastery()}}</pre>
     <ul class="listing">
       <li v-for="(info, key) in classSkillsMastery" :key="key" class="listing-item">
         {{ info }}
@@ -23,6 +25,7 @@
   </section>
 </template>
 <script setup lang="js">
+const {useCharacterData, getClassSkillsMastery} = useCharacter();
 const data = useCharacterData();
 const otherClassSkillsMastery = ref(data.value.mastery);
 const classSkillsMastery = getClassSkillsMastery();

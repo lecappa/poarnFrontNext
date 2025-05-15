@@ -59,11 +59,10 @@
 </template>
 <script setup lang="js">
 import classesInfos from "../public/classesInfos.json";
-
 const {update} = useStrapi();
-
+const {useCharacterData} = useCharacter();
 const data = useCharacterData();
-const character_class = ref(data.value.class);
+const character_class = ref(useCharacterData().value.class);
 const openClassDialog = ref(false);
 const changeObject = ref(false);
 const addClass = reactive({

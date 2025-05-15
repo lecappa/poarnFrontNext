@@ -31,6 +31,7 @@
 <script setup lang="js">
 const {logout} = useStrapiAuth();
 const router = useRouter();
+
 definePageMeta({
   middleware: 'auth',
   layout: 'connected'
@@ -39,8 +40,8 @@ const disconnection = () => {
   logout();
   router.push('/')
 }
-
-await callCharacterData();
-getClassSkills();
+const {callCharacterData, getSkills} = useCharacter();
+await callCharacterData()
+getSkills();
 const magicClass = useState('magicClass', () => canUseMagic());
 </script>
