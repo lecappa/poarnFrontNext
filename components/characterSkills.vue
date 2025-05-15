@@ -32,7 +32,8 @@
 
 </template>
 <script lang="js" setup>
-const {useCharacterData, getSkills} = useCharacter();
+const {useCharacterData} = useCharacter();
+const {getSkills} = useSkills();
 const {update} = useStrapi();
 const data = useCharacterData();
 const data_skills = ref(getSkills());

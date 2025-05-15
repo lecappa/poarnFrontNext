@@ -24,7 +24,7 @@
 </template>
 <script setup lang="js">
 import { computed } from 'vue';
-const { getSkillByName } = useCharacter();
+const { getSkillByName } = useSkills();
 
 const passiveScores = computed(() => [
   {

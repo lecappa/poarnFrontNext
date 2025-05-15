@@ -40,7 +40,8 @@ const disconnection = () => {
   logout();
   router.push('/')
 }
-const {callCharacterData, getSkills} = useCharacter();
+const {callCharacterData} = useCharacter();
+const {getSkills} = useSkills();
 await callCharacterData()
 getSkills();
 const magicClass = useState('magicClass', () => canUseMagic());

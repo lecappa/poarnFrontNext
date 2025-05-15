@@ -23,7 +23,8 @@
   </section>
 </template>
 <script setup lang="js">
-const {useCharacterData, getClassSkills} = useCharacter();
+const {useCharacterData} = useCharacter();
+const {getClassSkills} = useSkills();
 const data = useCharacterData();
 const characteristics = reactive(data.value.characteristics);
 const character_class = getClassSkills();

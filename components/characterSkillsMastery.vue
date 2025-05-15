@@ -23,7 +23,8 @@
   </section>
 </template>
 <script setup lang="js">
-const {useCharacterData, getClassSkillsMastery} = useCharacter();
+const {useCharacterData} = useCharacter();
+const {getClassSkillsMastery} = useSkills();
 const data = useCharacterData();
 const otherClassSkillsMastery = ref(data.value.mastery);
 const classSkillsMastery = getClassSkillsMastery();
