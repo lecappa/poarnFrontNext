@@ -7,7 +7,6 @@ const user = useStrapiUser()
 const {findOne} = useStrapi()
 
 
-
 export const useCharacter = () => {
     const useCharacterData = () => useState('characterData', () => ([]));
 
@@ -32,14 +31,15 @@ export const useCharacter = () => {
             }
         })
     }
+
+
     const getClassSkillsMastery = () => {
         const data = useCharacterData();
-        console.log(data.value.class);
-        const skills = [];
-        const allSkills = data.value.class.forEach((element) => {
-            skills.push(element.maitrises);
-        })
-        return new Set(skills.flat());
+        const nomsDesClasses = data.value.class.map(c => c.class_name)
+        console.log(nomsDesClasses)
+        const selected = classesInfos.filter(c => nomsDesClasses.includes(c.nom))
+        const toutesMaitrises = selected.flatMap(c => c.maitrises || [])
+        return [...new Set(toutesMaitrises)]
     }
 
     const getSkills = () => {

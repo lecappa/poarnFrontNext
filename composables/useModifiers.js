@@ -30,3 +30,10 @@ export const useUnityCharacteristicsModifiers = (slug) => {
         return Math.floor((score - 10) / 2)
     })
 }
+
+export function truncate(text, maxLength = 100) {
+    if (!text || typeof text !== 'string') return ''
+    return text.length <= maxLength
+        ? text
+        : text.substring(0, maxLength).trim() + '...'
+}
