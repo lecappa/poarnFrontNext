@@ -112,6 +112,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $sm) {
+      display: block;
+
+      .d-flex {
+        display: block !important;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -122,12 +131,29 @@
   position: fixed;
   z-index: 5;
 
+  @media (max-width: $sm) {
+    bottom: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   &-content {
     background-color: #ec2e4a;
     border-radius: 20px;
     display: inline-flex;
     flex-direction: column;
     padding: 1rem;
+
+    @media (max-width: $sm) {
+      align-items: baseline;
+      border-radius: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      width: 100%;
+    }
 
     a {
       color: #fff;

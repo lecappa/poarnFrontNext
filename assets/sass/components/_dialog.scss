@@ -2,7 +2,7 @@
 
 .dialog-box {
   position: fixed;
-  z-index: 10;
+  z-index: 99;
   top: 0;
   left: 0;
   bottom: 0;
@@ -12,7 +12,6 @@
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(6px);
-
 }
 
 .dialog {
@@ -28,12 +27,21 @@
   color:$white;
 
   @media (max-width: $sm) {
-    width: 90%;
+    width: 100%;
+    border-radius: 0;
+    height: 100%;
+    overflow: hidden;
+    overflow-y:auto;
   }
 
   &.large {
     max-width: 80rem;
     width: 80%;
+
+    @media (max-width: $sm) {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   .body {
@@ -54,6 +62,11 @@
     right: -12px;
     z-index: 5;
 
+    @media (max-width: $sm) {
+      top: 0;
+      right: 0;
+    }
+
     button {
       appearance: none;
       background-color: $pink;
@@ -65,6 +78,14 @@
       line-height: 27px;
       cursor: pointer;
       border-radius: 50%;
+
+      @media (max-width: $sm) {
+        z-index: 99;
+        top: 0;
+        right: 0;
+        position: fixed;
+        border-radius: 0;
+      }
     }
   }
 

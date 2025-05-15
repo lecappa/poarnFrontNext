@@ -1,5 +1,6 @@
 <template>
   <character-fight-infos></character-fight-infos>
+  <character-life-points></character-life-points>
   <character-weapons></character-weapons>
   <character-armors></character-armors>
 </template>

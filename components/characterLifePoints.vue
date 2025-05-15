@@ -5,13 +5,13 @@
       <button class="btn btn-small" v-if="changeObject" @click="updateData()">Valider</button>
     </div>
     <ul class="listing row">
-      <li class="col-lg-12">
+      <li class="col-lg-6">
         <div class="listing-item">
           <p>
             Points de vie actuel</p> <input type="number" min="0" class="invisible_input" v-model="life_points.current" @input="changeObject=true">
         </div>
       </li>
-      <li class="col-lg-12">
+      <li class="col-lg-6">
         <div class="listing-item">
           <p>Points de vie max</p> <input type="number" min="0" class="invisible_input" v-model="life_points.max" @input="changeObject=true">
         </div>

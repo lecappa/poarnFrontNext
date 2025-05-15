@@ -45,17 +45,18 @@ export const getCharacterDataSkills = () => {
     let skills = [];
 
     allSkills.forEach((element) => {
-        const test = data.value.skills.filter((i) => i.name === element.name);
+        const ifExpert = data.value.skills.filter((i) => i.name === element.name);
         let isExpertise = false;
-        if (test.length > 0) {
-            isExpertise = test[0].expertise;
+        if (ifExpert.length > 0) {
+            isExpertise = ifExpert[0].expertise;
         }
         const checkMasterySkill = obj => obj.name === element.name;
         skills.push({
             name: element.name,
             ability: element.ability,
             mastery: data.value.skills.some(checkMasterySkill),
-            expertise: isExpertise
+            expertise: isExpertise,
+            description: element.description
         });
     })
     return skills;

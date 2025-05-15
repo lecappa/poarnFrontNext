@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
 
   @media (max-width: $sm) {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 
@@ -21,6 +21,26 @@ body {
   width: 100%;
   max-width: 120rem;
   margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
+
+  @media (max-width: $sm) {
+    margin-top: 1rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.bubble-information {
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  color:$white;
+  position: absolute;
+  right: -1rem;
+  background-color: #37474f;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
 }

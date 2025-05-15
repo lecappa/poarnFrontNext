@@ -9,17 +9,37 @@
         <div class="listing-item">
           <label :for="key + '-0'">
             <input class="form-check-input" type="checkbox" :id="key + '-0'" v-model="skill.mastery"
-                   @change="changeObject=true" >
+                   @change="changeObject=true">
             <template v-if="hasExpertCapacity(skill)">
               <input class="form-check-input" type="checkbox" :id="key + '-0'" v-model="skill.expertise"
                      v-if="skill.mastery" @change="changeObject=true">
             </template>
             {{ skill.name }} ({{ skill.ability }})
-          </label> <b class="add-line">+{{ skillModifier(skill) }}</b>
+          </label>
+          <b class="add-line">+{{ skillModifier(skill) }}</b>
+          <button class="bubble-information"
+                  v-tooltip="{
+                    content: skill.description,
+                    placement : 'left',
+                    triggers: ['click', 'hover'],
+                  }">
+            ?
+          </button>
         </div>
       </li>
     </ul>
   </section>
+
+  <template v-if="displayBubble">
+    <div class="bubble-box">
+      <div class="bubble-box__content">
+        <button @click="closeBubble()">×</button>
+        <h4>{{ bubbleText.name }}</h4>
+        <p>{{ bubbleText.description }}</p>
+      </div>
+    </div>
+  </template>
+
 </template>
 <script lang="js" setup>
 const data = useCharacterData();
@@ -28,7 +48,8 @@ const characteristics = ref(data.value.characteristics);
 const capacities = ref(data.value.capacities);
 const changeObject = ref(false);
 const {update} = useStrapi();
-
+const displayBubble = ref(false);
+const bubbleText = ref();
 const skillModifier = (skill) => {
   const carac = characteristics.value.filter((i) => i.characteristics_slug === skill.ability);
 
@@ -56,5 +77,15 @@ const updateData = async () => {
     skills: result.map(({name, expertise}) => ({name, expertise}))
   });
   changeObject.value = false;
+}
+
+const openBubble = (i) => {
+  displayBubble.value = true;
+  bubbleText.value = i;
+}
+
+const closeBubble = () => {
+  displayBubble.value = false;
+  bubbleText.value = null;
 }
 </script>

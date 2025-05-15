@@ -111,7 +111,7 @@
     </dialog>
   </div>
   <div class="lv-nav">
-    <nav class="lv-nav-content"><a href="#search" class="mb-3">
+    <nav class="lv-nav-content"><a href="#search">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><title>zoom</title>
         <g fill="#ffffff">
           <path

@@ -13,6 +13,7 @@
     "@nuxt/icon": "^1.12.0",
     "@nuxtjs/strapi": "^2.0.0",
     "bootstrap": "^5.3.6",
+    "floating-vue": "^5.2.2",
     "nuxt": "^3.16.2",
     "nuxt-tiptap-editor": "^2.2.1",
     "sass": "^1.86.3",

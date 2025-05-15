@@ -10,7 +10,7 @@
       <character-saving-throws></character-saving-throws>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-items-stretch">
-      <character-life-points></character-life-points>
+      <character-passive-skills></character-passive-skills>
     </div>
   </div>
 

@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/strapi', '@nuxt/icon', 'nuxt-tiptap-editor'],
+  modules: ['@nuxtjs/strapi', '@nuxt/icon', 'nuxt-tiptap-editor', 'floating-vue/nuxt'],
   ssr: false,
   devtools: {enabled: true},
 

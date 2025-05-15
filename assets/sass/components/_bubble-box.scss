@@ -1,0 +1,53 @@
+@use "../abstract/index" as *;
+
+.bubble-box {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(41, 35, 27, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease-in-out;
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    padding: 3rem;
+    transition: all 0.25s ease-in-out;
+    background-color: $green;
+    border-radius: 4px;
+
+    @media (max-width: $sm) {
+      width: 85%;
+      max-width: inherit;
+      padding: 2rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      appearance: none;
+      background-color: $pink;
+      border: none;
+      font-size: 1.5rem;
+      color: $white;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      border-radius: 50%;
+      position: absolute;
+      top: -1.5rem;
+      right: -1.5rem;
+    }
+  }
+}
