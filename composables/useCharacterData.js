@@ -1,7 +1,7 @@
 import classesInfos from "public/classesInfos.json";
 import allSkills from "public/skills.json";
 import {ref} from "vue";
-import {useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
+import {getMasteryBonus, useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
 
 const user = useStrapiUser();
 const {findOne} = useStrapi();
@@ -62,6 +62,37 @@ export const getCharacterDataSkills = () => {
     return skills;
 }
 
+
+export const getSkillByName = (name) => {
+    const data = useCharacterData();
+    const skill = allSkills.find(skill => skill.name === name);
+
+    if (!skill) return null;
+
+    const masteredSkill = data.value.skills.find(i => i.name === name);
+    const hasMastery = !!masteredSkill;
+    const hasExpertise = hasMastery && masteredSkill.expertise;
+
+    const baseModifier = useUnityCharacteristicsModifiers(skill.ability);
+    const masteryBonus = getMasteryBonus();
+
+    let finalValue = baseModifier;
+    if (hasExpertise) {
+        finalValue += masteryBonus * 2;
+    } else if (hasMastery) {
+        finalValue += masteryBonus;
+    }
+
+    return {
+        name: skill.name,
+        slug: skill.ability,
+        description: skill.description,
+        value: 10 + finalValue,
+        master: hasMastery,
+        expert: hasExpertise
+    };
+};
+
 export const useCharacterCA = () => {
     const data = useCharacterData();
     const character_class = ref(data.value.class);
@@ -77,7 +108,7 @@ export const useCharacterCA = () => {
     if (isMonk.length > 0) {
         CA_result = {
             score: useUnityCharacteristicsModifiers('dex') + 10 + useUnityCharacteristicsModifiers('sag'),
-            note: '10 + Sag (' + useUnityCharacteristicsModifiers('sag')+ ') + Dex(' + useUnityCharacteristicsModifiers('dex') + ')',
+            note: '10 + Sag (' + useUnityCharacteristicsModifiers('sag') + ') + Dex(' + useUnityCharacteristicsModifiers('dex') + ')',
             type: 'Moine :',
         }
     } else if (character_armors.value.length === 0) {
@@ -89,7 +120,7 @@ export const useCharacterCA = () => {
     } else {
         CA_result = {
             score: sumWithInitial + useUnityCharacteristicsModifiers('dex'),
-            note: 'Armures ('+sumWithInitial + ') + Dex(' + useUnityCharacteristicsModifiers('dex') + ')',
+            note: 'Armures (' + sumWithInitial + ') + Dex(' + useUnityCharacteristicsModifiers('dex') + ')',
             type: 'Total CA :',
         }
     }
