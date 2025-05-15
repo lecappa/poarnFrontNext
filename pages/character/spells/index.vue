@@ -128,7 +128,8 @@
 <script lang="js" setup>
 const {useCharacterData, callCharacterData} = useCharacter();
 await callCharacterData();
-import {useSpells, canUseMagic} from '@/composables/useSpells.js';
+import {useSpells} from '@/composables/useSpells.js';
+const {canUseMagic} = useSpells();
 const magicClass = useState('magicClass', () => canUseMagic());
 const data = useCharacterData();
 const character_spells = ref(data.value.spells);

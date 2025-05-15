@@ -1,5 +1,6 @@
 import jsonSpells from '../public/sorts.json';
 import {ref} from 'vue';
+
 const {useCharacterData} = useCharacter();
 
 
@@ -24,33 +25,34 @@ export const useSpells = () => {
         return Array.from(classSet).sort()
     }
 
+    const canUseMagic = () => {
+        const data = useCharacterData();
+        const characterClass = data.value.class;
+        const magicClass = {
+            barde: 'cha',
+            clerc: 'sag',
+            druide: 'sag',
+            ensorceleur: 'cha',
+            magicien: 'int',
+            occultiste: 'cha',
+            paladin: 'cha',
+            rôdeur: 'sag',
+            artificier: 'int'
+        };
+        for (const classe of characterClass) {
+            const className = classe.class_name?.toLowerCase();
+            if (magicClass[className]) {
+                const caracteristique = magicClass[className];
+                return [true, classe.class_name, caracteristique];
+            }
+        }
+        return [false, null]
+    }
+
     return {
         allSpells,
         getSpellsByClass,
-        getAllClasses
+        getAllClasses,
+        canUseMagic
     }
-}
-
-export const canUseMagic = () => {
-    const data = useCharacterData();
-    const characterClass = data.value.class;
-    const magicClass = {
-        barde: 'cha',
-        clerc: 'sag',
-        druide: 'sag',
-        ensorceleur: 'cha',
-        magicien: 'int',
-        occultiste: 'cha',
-        paladin: 'cha',
-        rôdeur: 'sag',
-        artificier: 'int'
-    };
-    for (const classe of characterClass) {
-        const className = classe.class_name?.toLowerCase();
-        if (magicClass[className]) {
-            const caracteristique = magicClass[className];
-            return [true, classe.class_name, caracteristique];
-        }
-    }
-    return [false, null]
 }

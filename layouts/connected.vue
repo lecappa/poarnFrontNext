@@ -29,6 +29,8 @@
   </div>
 </template>
 <script setup lang="js">
+import {useSpells} from "~/composables/useSpells.js";
+
 const {logout} = useStrapiAuth();
 const router = useRouter();
 
@@ -42,6 +44,7 @@ const disconnection = () => {
 }
 const {callCharacterData} = useCharacter();
 const {getSkills} = useSkills();
+const {canUseMagic} = useSpells();
 await callCharacterData()
 getSkills();
 const magicClass = useState('magicClass', () => canUseMagic());

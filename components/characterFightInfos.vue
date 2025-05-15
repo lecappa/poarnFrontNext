@@ -32,7 +32,7 @@
 </template>
 <script lang="js" setup>
 const {getCA} = useCharacter();
-import {canUseMagic} from '@/composables/useSpells.js';
+const {canUseMagic} = useSpells();
 const magicClass = useState('magicClass', () => canUseMagic());
 const spellAttackMod = () => {
   if (magicClass.value[0]) {

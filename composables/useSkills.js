@@ -60,10 +60,7 @@ export const useSkills = () => {
             const hasMastery = !!masteredSkill
             const hasExpertise = hasMastery && masteredSkill.expertise
 
-            // ✅ baseModifier est un computed, il faut accéder à sa .value
-            const baseModifier = useUnityCharacteristicsModifiers(skill.ability).value
-
-            let finalValue = baseModifier
+            let finalValue = useUnityCharacteristicsModifiers(skill.ability).value
             if (hasExpertise) {
                 finalValue += masteryBonus * 2
             } else if (hasMastery) {
