@@ -22,7 +22,6 @@ const onSubmit = async () => {
     await login({identifier: identifier.value, password: password.value})
     await router.push('/character/fiche')
   } catch (e) {
-    notificationError('Identifiant ou mot de passe invalide');
   }
 }
 </script>

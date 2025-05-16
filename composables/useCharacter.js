@@ -1,7 +1,6 @@
 import {useStrapiUser, useStrapi} from '#imports'
 import classesInfos from 'public/classesInfos.json'
-import allSkills from 'public/skills.json'
-import {getMasteryBonus, useUnityCharacteristicsModifiers} from '~/composables/useModifiers'
+import {useUnityCharacteristicsModifiers} from '~/composables/useModifiers'
 
 const user = useStrapiUser()
 const {findOne} = useStrapi()
@@ -36,7 +35,6 @@ export const useCharacter = () => {
         }
 
         if (characterArmors.length === 0) {
-            console.log('dd')
             return {
                 score: 10 + dex.value,
                 note: `10 + Dex(${dex.value})`,

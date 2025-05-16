@@ -3,7 +3,7 @@
     <a href="#" class="cd-modal-trigger" type="button">
       <img src="/dd-logo.svg" alt="Logo" height="50">
     </a>
-    <ul role="menu">
+    <ul role="menu" v-if="isVisible">
       <li>
         <nuxt-link to="/character/informations"><span>Général</span> <i class="fa-solid fa-circle-user"></i></nuxt-link>
       </li>
@@ -39,7 +39,7 @@
       </h1>
       <ul class="main-link">
         <li>
-          <nuxt-link to="/journal/" class="modal-close-link">Journal de campagne</nuxt-link>
+          <nuxt-link to="/diary/" class="modal-close-link">Journal de campagne</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/character/fiche" class="modal-close-link">Fiche de personnage</nuxt-link>
@@ -69,6 +69,21 @@ import {useSpells} from "~/composables/useSpells.js";
 
 const {logout} = useStrapiAuth();
 const router = useRouter();
+import { useRoute } from 'vue-router'
+const route = useRoute();
+const isVisible = ref(false);
+const updateVisibility = () => {
+  isVisible.value = route.path.includes('/character/')
+}
+
+updateVisibility()
+
+watch(
+    () => route.path,
+    () => {
+      updateVisibility()
+    }
+)
 
 definePageMeta({
   middleware: 'auth',

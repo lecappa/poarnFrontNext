@@ -23,7 +23,6 @@ export const useSkills = () => {
         const {useCharacterData} = useCharacter();
         const data = useCharacterData();
         const nomsDesClasses = data.value.class.map(c => c.class_name)
-        console.log(nomsDesClasses)
         const selected = classesInfos.filter(c => nomsDesClasses.includes(c.nom))
         const toutesMaitrises = selected.flatMap(c => c.maitrises || [])
         return [...new Set(toutesMaitrises)]
