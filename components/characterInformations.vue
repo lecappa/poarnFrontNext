@@ -22,7 +22,7 @@
   <br>
     <ul class="listing">
       <li class="listing-item">
-        Sagesse passive  <span>{{10 + useUnityCharacteristicsModifiers('sag')}}</span>
+        Sagesse passive  <span>{{10 + useUnityCharacteristicsModifiers('sag').value}}</span>
       </li>
       <li class="listing-item">
         Initiative <span>D20 + {{useUnityCharacteristicsModifiers('dex')}}</span>
