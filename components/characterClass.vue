@@ -18,7 +18,7 @@
           Dés de vie <b class="">{{ classInfos.deVie }}</b>
         </li>
         <li class="listing-item">
-          Sauvegarde <span><b v-for="item in classInfos.jetsDeSauvegarde">{{ item }}, </b></span>
+          Sauvegarde <span><b v-for="item in classInfos.savingThrows">{{ item }}, </b></span>
         </li>
         <li class="listing-item">
           Niveau
@@ -59,15 +59,20 @@
 </template>
 <script setup lang="js">
 import classesInfos from "../public/classesInfos.json";
+import {useCharacter} from "~/composables/useCharacter.js";
+import {useSkills} from "~/composables/useSkills.js";
+import {notificationSuccess} from "~/composables/useNotification.js";
 const {update} = useStrapi();
 const {useCharacterData} = useCharacter();
+const {getClassSkills} = useSkills();
 const data = useCharacterData();
-const character_class = ref(useCharacterData().value.class);
+const character_class = ref(getClassSkills());
 const openClassDialog = ref(false);
 const changeObject = ref(false);
 const addClass = reactive({
   class_name: ""
 })
+
 
 const addClassItem = () => {
   const classSelected = classesInfos.filter((i) => i.nom === addClass.class_name)

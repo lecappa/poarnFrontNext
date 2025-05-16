@@ -71,7 +71,7 @@ export const useSkills = () => {
                 name: skill.name,
                 slug: skill.ability,
                 description: skill.description,
-                value: 10 + finalValue,
+                score: 10 + finalValue,
                 master: hasMastery,
                 expert: hasExpertise,
             }
