@@ -25,17 +25,18 @@
       </template>
       <li>
         <span>Classe d'armure</span>
-        <b>{{ useCharacterCA()['score']}}</b>
+        <b>{{ getCA()['score']}}</b>
       </li>
     </ul>
   </section>
 </template>
 <script lang="js" setup>
-import {canUseMagic} from '@/composables/useSpells.js';
+const {getCA} = useCharacter();
+const {canUseMagic} = useSpells();
 const magicClass = useState('magicClass', () => canUseMagic());
 const spellAttackMod = () => {
   if (magicClass.value[0]) {
-    return getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]);
+    return getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]).value;
   }
 }
 </script>

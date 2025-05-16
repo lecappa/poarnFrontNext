@@ -1,77 +1,39 @@
-import {useCharacterData} from "~/composables/useCharacterData.js";
-import {ref} from "vue";
-
 export const useCharacteristicsModifiers = (score) => {
-    let scoreInt = ref(parseInt(score));
-    if (scoreInt < 1) {
-        return 0;
-    }
-    if (scoreInt.value === 1) {
-        return -5;
-    }
-    if (scoreInt.value === 2 || scoreInt.value === 3) {
-        return -4;
-    }
-    if (scoreInt.value === 4 || scoreInt.value === 5) {
-        return -3;
-    }
-    if (scoreInt.value === 6 || scoreInt.value === 7) {
-        return -2;
-    }
-    if (scoreInt.value === 8 || scoreInt.value === 9) {
-        return -1;
-    }
-    if (scoreInt.value === 10 || scoreInt.value === 11) {
-        return 0;
-    }
-    if (scoreInt.value === 12 || scoreInt.value === 13) {
-        return 1;
-    }
-    if (scoreInt.value === 14 || scoreInt.value === 15) {
-        return 2;
-    }
-    if (scoreInt.value === 16 || scoreInt.value === 17) {
-        return 3;
-    }
-    if (scoreInt.value === 18 || scoreInt.value === 19) {
-        return 4;
-    }
-    if (scoreInt.value === 20 || scoreInt.value === 21) {
-        return 5;
-    }
-    if (scoreInt.value > 21) {
-        return 6;
-    }
+    const parsed = parseInt(score, 10)
+    if (isNaN(parsed) || parsed < 1) return 0
+    return Math.floor((parsed - 10) / 2)
 }
 
 export const getMasteryBonus = () => {
-    const data = useCharacterData();
-    const level = ref(data.value.informations.main_level);
+    const {useCharacterData} = useCharacter();
+    const character = useCharacterData()
+    const level = character.value?.informations?.main_level ?? 1
 
-    if (level.value >= 1 && level.value <= 4) {
-        return 2;
-    }
-    if (level.value >= 5 && level.value <= 8) {
-        return 3;
-    }
-    if (level.value >= 9 && level.value <= 12) {
-        return 4;
-    }
-    if (level.value >= 13 && level.value <= 16) {
-        return 5;
-    }
-    if (level.value >= 17 && level.value <= 20) {
-        return 6;
-    }
-    if (level.value > 20) {
-        return 7;
-    }
+    if (level > 20) return 7
+    if (level >= 17) return 6
+    if (level >= 13) return 5
+    if (level >= 9) return 4
+    if (level >= 5) return 3
+    return 2
 }
 
-
 export const useUnityCharacteristicsModifiers = (slug) => {
-    const data = useCharacterData();
-    const characteristics = ref(data.value.characteristics);
-    const specificCarac = ref(data.value.characteristics.filter((i) => i.characteristics_slug === slug));
-    return useCharacteristicsModifiers(specificCarac.value[0].characteristics_value);
+    const {useCharacterData} = useCharacter();
+    const data = useCharacterData()
+
+    return computed(() => {
+        const all = data.value.characteristics
+        const target = all.find((i) => i.characteristics_slug === slug)
+        const score = parseInt(target?.characteristics_value ?? 10, 10)
+
+        if (isNaN(score) || score < 1) return 0
+        return Math.floor((score - 10) / 2)
+    })
+}
+
+export function truncate(text, maxLength = 100) {
+    if (!text || typeof text !== 'string') return ''
+    return text.length <= maxLength
+        ? text
+        : text.substring(0, maxLength).trim() + '...'
 }

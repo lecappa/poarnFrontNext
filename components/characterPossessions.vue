@@ -55,6 +55,7 @@
 </template>
 
 <script lang="js" setup>
+const {useCharacterData} = useCharacter();
 const {update} = useStrapi();
 const data = useCharacterData();
 const possessions = ref(data.value.possessions);

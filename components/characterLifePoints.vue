@@ -20,6 +20,7 @@
   </section>
 </template>
 <script setup lang="js">
+const {useCharacterData} = useCharacter();
 const data = useCharacterData();
 const life_points = ref(data.value.life_points);
 const {update} = useStrapi();

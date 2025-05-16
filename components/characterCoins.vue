@@ -25,6 +25,7 @@
   </section>
 </template>
 <script lang="js" setup>
+const {useCharacterData} = useCharacter();
 const data = useCharacterData();
 const coins = ref(data.value.coins);
 const {update} = useStrapi();

@@ -109,8 +109,8 @@
   </div>
 </template>
 <script lang="js" setup>
-import {weapons, armors} from '~/composables/useEquipements.js';
-
+import {weapons} from '~/composables/useEquipements.js';
+const {useCharacterData} = useCharacter();
 const data = useCharacterData();
 const character_weapons = ref(data.value.weapons);
 const allWeapons = ref(weapons);
@@ -129,13 +129,13 @@ const addWeapon = ref({
 const getAttack = (weapon) => {
   const characteristic = weapon.characteristic;
   const bonus = weapon.bonus;
-  return getMasteryBonus() + useUnityCharacteristicsModifiers(characteristic) + bonus
+  return getMasteryBonus() + useUnityCharacteristicsModifiers(characteristic).value + bonus
 }
 
 const getDamage = (weapon) => {
   const characteristic = weapon.characteristic;
   const bonus = weapon.bonus;
-  return weapon.damage + ' + '+  (useUnityCharacteristicsModifiers(characteristic) + bonus)
+  return weapon.damage + ' + '+  (useUnityCharacteristicsModifiers(characteristic).value + bonus)
 }
 
 const filterWeapon = computed(() => {

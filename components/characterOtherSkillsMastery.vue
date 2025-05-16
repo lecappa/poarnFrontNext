@@ -53,11 +53,12 @@
 
 </template>
 <script setup lang="js">
-const openClassDialog = ref(false);
+const {update} = useStrapi();
+const {useCharacterData} = useCharacter();
 const data = useCharacterData();
 const capacities = ref(data.value.capacities);
-const {update} = useStrapi();
 const isEdit = ref(false);
+const openClassDialog = ref(false);
 let addCapacity = ref({
   name: "",
   level: 0,

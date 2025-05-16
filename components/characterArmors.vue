@@ -31,7 +31,7 @@
               - {{ armor.weight }}
             </template>
             <template v-if="armor.note">
-              - {{ armor.note }}
+              - {{truncate(armor.note , 40)}}
             </template>
           </td>
           <td style="width: 3rem;">
@@ -40,16 +40,16 @@
           </td>
         </tr>
         <tr class="total">
-          <td>Total CA : <big>{{ useCharacterCA()['score']}} </big></td>
-          <td><small>{{ useCharacterCA()['note']}}</small></td>
+          <td>Total CA : <big>{{ getCA()['score']}} </big></td>
+          <td><small>{{ getCA()['note']}}</small></td>
         </tr>
         </tbody>
       </table>
-      <br>
-      <p class="text-right">
-        <button class="btn" @click="openClassDialog = true">Ajouter une armure</button>
-      </p>
     </div>
+    <br>
+    <p class="text-right">
+      <button class="btn" @click="openClassDialog = true">Ajouter une armure</button>
+    </p>
   </section>
   <div class="dialog-box" v-if="openClassDialog">
     <dialog open class="dialog">
@@ -134,6 +134,7 @@
 </template>
 <script lang="js" setup>
 import {armors} from "~/composables/useEquipements.js";
+const {useCharacterData, getCA, callCharacterData} = useCharacter();
 const {update} = useStrapi();
 const allArmors = ref(armors);
 const data = useCharacterData();

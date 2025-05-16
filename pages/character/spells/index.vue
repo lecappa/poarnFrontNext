@@ -126,8 +126,10 @@
 </template>
 
 <script lang="js" setup>
+const {useCharacterData, callCharacterData} = useCharacter();
 await callCharacterData();
-import {useSpells, canUseMagic} from '@/composables/useSpells.js';
+import {useSpells} from '@/composables/useSpells.js';
+const {canUseMagic} = useSpells();
 const magicClass = useState('magicClass', () => canUseMagic());
 const data = useCharacterData();
 const character_spells = ref(data.value.spells);
@@ -220,9 +222,9 @@ const updateData = async () => {
 
 
 const spellSaveDC = () => {
-  return 8 + getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]);
+  return 8 + getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]).value;
 }
 const spellAttackMod = () => {
-  return getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]);
+  return getMasteryBonus() + useUnityCharacteristicsModifiers(magicClass.value[2]).value;
 }
 </script>

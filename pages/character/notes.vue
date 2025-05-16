@@ -69,6 +69,7 @@
   </section>
 </template>
 <script lang="js" setup>
+const {useCharacterData} = useCharacter();
 const {update} = useStrapi();
 definePageMeta({
   middleware: 'auth',

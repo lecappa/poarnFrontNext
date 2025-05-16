@@ -16,4 +16,6 @@ definePageMeta({
   middleware: 'auth',
   layout: 'connected'
 })
+const {callCharacterData} = useCharacter();
+await callCharacterData();
 </script>

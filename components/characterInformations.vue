@@ -22,9 +22,6 @@
   <br>
     <ul class="listing">
       <li class="listing-item">
-        Sagesse passive  <span>{{10 + useUnityCharacteristicsModifiers('sag')}}</span>
-      </li>
-      <li class="listing-item">
         Initiative <span>D20 + {{useUnityCharacteristicsModifiers('dex')}}</span>
       </li>
       <li class="listing-item">
@@ -40,10 +37,9 @@
   </section>
 </template>
 <script setup lang="js">
-import {useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
-
-const data = useCharacterData();
-const information = ref(data.value.informations);
+const {useCharacterData} = useCharacter();
+const data = ref(useCharacterData().value);
+const information = ref(useCharacterData().value.informations);
 const {update} = useStrapi();
 const changeObject = ref(false);
 
