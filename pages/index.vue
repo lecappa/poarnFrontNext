@@ -13,15 +13,20 @@
   </div>
 </template>
 <script setup lang="ts">
+import {notificationError, notificationSuccess} from "~/composables/useNotification";
+
 const {login} = useStrapiAuth();
 const router = useRouter();
 const identifier = ref('');
 const password = ref('');
+
 const onSubmit = async () => {
   try {
     await login({identifier: identifier.value, password: password.value})
     await router.push('/character/fiche')
+    notificationSuccess("Bienvenue !");
   } catch (e) {
+    notificationError("Identifiant ou mot de passe invalide");
   }
 }
 </script>
