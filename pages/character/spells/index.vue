@@ -15,7 +15,9 @@
         <div class="listing-item">
           <ul class="spell-slots">
             <li v-for="(item, index, i) in magicSlots" :key="index">
-              <span>Niveau {{ i }}</span>
+
+              <template v-if="userMagicCLass === 'Barde' && i === 0"><span>Tours de magie connus</span></template>
+              <template v-else><span>Niveau {{ i }}</span></template>
               <b>{{ item }} sort{{ pluralize(item) }}</b>
             </li>
           </ul>
@@ -147,7 +149,8 @@ const data = useCharacterData();
 const character_spells = ref(data.value.spells);
 const {update} = useStrapi();
 const {getSpellsByClass, getAllClasses} = useSpells();
-const selectedClass = ref(magicClass.value[1]);
+const userMagicCLass = ref(magicClass.value[1]);
+const selectedClass = ref(userMagicCLass.value);
 const allClasses = getAllClasses();
 const openClassDialog = ref(false);
 const selectedSpell = ref([]);

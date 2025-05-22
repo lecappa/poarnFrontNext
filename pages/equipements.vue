@@ -89,7 +89,7 @@
 </template>
 <script setup lang="js">
 import {ref} from 'vue';
-import {weapons, armors} from '@/composables/equipements';
+import {weapons, armors} from '@/composables/useEquipements.js';
 
 definePageMeta({
   middleware: 'auth',

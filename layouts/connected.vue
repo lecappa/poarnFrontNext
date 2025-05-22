@@ -95,10 +95,11 @@ const disconnection = () => {
 }
 const {callCharacterData} = useCharacter();
 const {getSkills} = useSkills();
-const {canUseMagic} = useSpells();
+const {canUseMagic, getSpellsSlot} = useSpells();
 await callCharacterData()
 getSkills();
 const magicClass = useState('magicClass', () => canUseMagic());
+const magicSlots = useState('getSpellsSlot', () => getSpellsSlot());
 
 onMounted(() => {
   const modalTrigger = document.querySelector(".cd-modal-trigger"),
