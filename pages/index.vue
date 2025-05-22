@@ -11,6 +11,10 @@
       </form>
     </div>
   </div>
+  <video class="intro-video" src="public/pg2.mp4"
+         poster="public/pg2.jpg" autoplay="">
+    <div></div>
+  </video>
 </template>
 <script setup lang="ts">
 import {notificationError, notificationSuccess} from "~/composables/useNotification";
