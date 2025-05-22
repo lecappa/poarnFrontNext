@@ -1,4 +1,5 @@
 import jsonSpells from '../public/sorts.json';
+import jsonSpellsSlots from '../public/spells-slots.json';
 import {ref} from 'vue';
 
 const {useCharacterData} = useCharacter();
@@ -9,6 +10,19 @@ export const useSpells = () => {
 
     const allSpells = () => {
         return allSpellsData.value;
+    }
+
+    const spellsSlots = () => {
+        return jsonSpellsSlots;
+    }
+
+    const getSpellsSlot = () => {
+        const data = useCharacterData();
+        const characterClass = data.value.class;
+        const magicCLass = canUseMagic()[1];
+        const characterClassLevel = characterClass.find((i) => i.class_name === magicCLass).class_level
+        const result = jsonSpellsSlots[magicCLass];
+        return result[characterClassLevel];
     }
 
     const getSpellsByClass = (className) => {
@@ -50,6 +64,8 @@ export const useSpells = () => {
     }
 
     return {
+        getSpellsSlot,
+        spellsSlots,
         allSpells,
         getSpellsByClass,
         getAllClasses,
