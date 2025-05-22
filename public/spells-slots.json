@@ -1,0 +1,1413 @@
+{
+  "Magicien": {
+    "1": {
+      "niveau_0": 3,
+      "niveau_1": 2
+    },
+    "2": {
+      "niveau_0": 3,
+      "niveau_1": 3
+    },
+    "3": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "4": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "5": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "6": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "7": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "8": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "9": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 1
+    },
+    "10": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2
+    },
+    "11": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "12": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "13": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "14": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "15": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "16": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "17": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "18": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "19": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "20": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 2,
+      "niveau_8": 1,
+      "niveau_9": 1
+    }
+  },
+  "Barde": {
+    "1": {
+      "niveau_0": 2,
+      "niveau_1": 2
+    },
+    "2": {
+      "niveau_0": 2,
+      "niveau_1": 3
+    },
+    "3": {
+      "niveau_0": 2,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "4": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "5": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "6": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "7": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "8": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "9": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 1
+    },
+    "10": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2
+    },
+    "11": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "12": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "13": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "14": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "15": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "16": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "17": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "18": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "19": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "20": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 2,
+      "niveau_8": 1,
+      "niveau_9": 1
+    }
+  },
+  "Clerc": {
+    "1": {
+      "niveau_0": 3,
+      "niveau_1": 2
+    },
+    "2": {
+      "niveau_0": 3,
+      "niveau_1": 3
+    },
+    "3": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "4": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "5": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "6": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "7": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "8": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "9": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 1
+    },
+    "10": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2
+    },
+    "11": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "12": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "13": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "14": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "15": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "16": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "17": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "18": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "19": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "20": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 2,
+      "niveau_8": 1,
+      "niveau_9": 1
+    }
+  },
+  "Druide": {
+    "1": {
+      "niveau_0": 2,
+      "niveau_1": 2
+    },
+    "2": {
+      "niveau_0": 2,
+      "niveau_1": 3
+    },
+    "3": {
+      "niveau_0": 2,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "4": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "5": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "6": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "7": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "8": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "9": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 1
+    },
+    "10": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2
+    },
+    "11": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "12": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "13": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "14": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "15": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "16": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "17": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "18": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "19": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "20": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 2,
+      "niveau_8": 1,
+      "niveau_9": 1
+    }
+  },
+  "Sorcier": {
+    "1": {
+      "niveau_0": 4,
+      "niveau_1": 2
+    },
+    "2": {
+      "niveau_0": 4,
+      "niveau_1": 3
+    },
+    "3": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "4": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "5": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "6": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "7": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "8": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "9": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 1
+    },
+    "10": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2
+    },
+    "11": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "12": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "13": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "14": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "15": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "16": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "17": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "18": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "19": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "20": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 2,
+      "niveau_8": 1,
+      "niveau_9": 1
+    }
+  },
+  "Ensorceleur": {
+    "1": {
+      "niveau_0": 4,
+      "niveau_1": 2
+    },
+    "2": {
+      "niveau_0": 4,
+      "niveau_1": 3
+    },
+    "3": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "4": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "5": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "6": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "7": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "8": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "9": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 1
+    },
+    "10": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2
+    },
+    "11": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "12": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "13": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "14": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "15": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "16": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "17": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "18": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "19": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "20": {
+      "niveau_0": 6,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 2,
+      "niveau_8": 1,
+      "niveau_9": 1
+    }
+  },
+  "Paladin": {
+    "1": {
+      "niveau_0": 0
+    },
+    "2": {
+      "niveau_0": 0,
+      "niveau_1": 2
+    },
+    "3": {
+      "niveau_0": 0,
+      "niveau_1": 3
+    },
+    "4": {
+      "niveau_0": 0,
+      "niveau_1": 3
+    },
+    "5": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "6": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "7": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "8": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "9": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "10": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "11": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "12": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "13": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "14": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "15": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "16": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "17": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "18": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "19": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "20": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    }
+  },
+  "Rôdeur": {
+    "1": {
+      "niveau_0": 0
+    },
+    "2": {
+      "niveau_0": 0,
+      "niveau_1": 2
+    },
+    "3": {
+      "niveau_0": 0,
+      "niveau_1": 3
+    },
+    "4": {
+      "niveau_0": 0,
+      "niveau_1": 3
+    },
+    "5": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "6": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "7": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "8": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "9": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "10": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "11": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "12": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "13": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "14": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "15": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "16": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "17": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "18": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "19": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "20": {
+      "niveau_0": 0,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    }
+  },
+  "Occultiste": {
+    "1": {
+      "niveau_0": 3,
+      "niveau_1": 2
+    },
+    "2": {
+      "niveau_0": 3,
+      "niveau_1": 3
+    },
+    "3": {
+      "niveau_0": 3,
+      "niveau_1": 4,
+      "niveau_2": 2
+    },
+    "4": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3
+    },
+    "5": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 2
+    },
+    "6": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3
+    },
+    "7": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 1
+    },
+    "8": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 2
+    },
+    "9": {
+      "niveau_0": 4,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 1
+    },
+    "10": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2
+    },
+    "11": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "12": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1
+    },
+    "13": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "14": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "15": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1
+    },
+    "16": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1
+    },
+    "17": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 2,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "18": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 1,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "19": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 1,
+      "niveau_8": 1,
+      "niveau_9": 1
+    },
+    "20": {
+      "niveau_0": 5,
+      "niveau_1": 4,
+      "niveau_2": 3,
+      "niveau_3": 3,
+      "niveau_4": 3,
+      "niveau_5": 3,
+      "niveau_6": 2,
+      "niveau_7": 2,
+      "niveau_8": 1,
+      "niveau_9": 1
+    }
+  }
+}

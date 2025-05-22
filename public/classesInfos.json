@@ -133,7 +133,7 @@
         "sort": ""
     },
     {
-        "nom": "Sorcier",
+        "nom": "Occultiste",
         "deVie": "D8",
         "maitrises":  ["Armures légères", "Armes courantes"],
         "outils": [],

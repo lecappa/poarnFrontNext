@@ -61,7 +61,6 @@
 import classesInfos from "../public/classesInfos.json";
 import {useCharacter} from "~/composables/useCharacter.js";
 import {useSkills} from "~/composables/useSkills.js";
-import {notificationSuccess} from "~/composables/useNotification.js";
 const {update} = useStrapi();
 const {useCharacterData} = useCharacter();
 const {getClassSkills} = useSkills();

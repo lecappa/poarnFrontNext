@@ -3,12 +3,22 @@
     <div class="row listing">
       <div class="col-lg-6">
         <div class="listing-item">
-          Jet de sauvegarde des sorts : <b>{{spellSaveDC()}}</b>
+          Jet de sauvegarde des sorts : <b>{{ spellSaveDC() }}</b>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="listing-item">
-          Attaques avec un sort : <b>d20 + {{spellAttackMod()}}</b>
+          Attaques avec un sort : <b>d20 + {{ spellAttackMod() }}</b>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="listing-item">
+          <ul class="spell-slots">
+            <li v-for="(item, index, i) in magicSlots" :key="index">
+              <span>Niveau {{ i }}</span>
+              <b>{{ item }} sort{{ pluralize(item) }}</b>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -129,8 +139,10 @@
 const {useCharacterData, callCharacterData} = useCharacter();
 await callCharacterData();
 import {useSpells} from '@/composables/useSpells.js';
-const {canUseMagic} = useSpells();
+
+const {canUseMagic, getSpellsSlot} = useSpells();
 const magicClass = useState('magicClass', () => canUseMagic());
+const magicSlots = useState('getSpellsSlot', () => getSpellsSlot());
 const data = useCharacterData();
 const character_spells = ref(data.value.spells);
 const {update} = useStrapi();
@@ -219,6 +231,9 @@ const updateData = async () => {
   });
 }
 
+const pluralize = (count) => {
+  return count > 1 ? 's' : ''
+}
 
 
 const spellSaveDC = () => {
