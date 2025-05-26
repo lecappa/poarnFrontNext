@@ -51,6 +51,9 @@
           <nuxt-link to="/dons/" class="modal-close-link">Dons</nuxt-link>
         </li>
         <li>
+          <nuxt-link to="/manifestations/" class="modal-close-link">Manifestations occultes</nuxt-link>
+        </li>
+        <li>
           <nuxt-link to="/histoires" class="modal-close-link">Les terres très anciennes</nuxt-link>
         </li>
         <li>
