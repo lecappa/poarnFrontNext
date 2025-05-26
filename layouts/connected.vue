@@ -99,7 +99,6 @@ const {canUseMagic, getSpellsSlot} = useSpells();
 await callCharacterData()
 getSkills();
 const magicClass = useState('magicClass', () => canUseMagic());
-const magicSlots = useState('getSpellsSlot', () => getSpellsSlot());
 
 onMounted(() => {
   const modalTrigger = document.querySelector(".cd-modal-trigger"),

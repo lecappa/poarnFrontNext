@@ -12,7 +12,7 @@
     </div>
   </div>
   <video class="intro-video" src="public/pg2.mp4"
-         poster="public/pg2.jpg" autoplay="">
+         poster="public/bg-app-2.jpg" autoplay="">
     <div></div>
   </video>
 </template>

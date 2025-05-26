@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 
   strapi: {
     url: 'https://paorn.fr',
-    //url:'https://cappa.hd.free.fr',
+    //url:'http://localhost:1337',
     version: 'v5',
     prefix: '/api',
     admin: '/admin',
