@@ -31,9 +31,15 @@ export const useUnityCharacteristicsModifiers = (slug) => {
     })
 }
 
-export function truncate(text, maxLength = 100) {
+export const truncate = (text, maxLength = 100) => {
     if (!text || typeof text !== 'string') return ''
     return text.length <= maxLength
         ? text
         : text.substring(0, maxLength).trim() + '...'
+}
+
+export const getCharacteristics = (c) => {
+    const {useCharacterData} = useCharacter();
+    const all = useCharacterData().value.characteristics;
+    return all.find((i) => i.characteristics_slug === c);
 }
