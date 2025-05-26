@@ -13,9 +13,31 @@
               <p>Points de KI</p>
             </div>
             <div style="text-align: right">
-              <input type="number" min="0" :max="monkLevel" class="invisible_input" v-model="currentKiPoints"
-                     @input="changeObject=true"> / 5
+              <input type="number" min="0" class="invisible_input" v-model="information.ki_points"
+                     @input="changeObject=true"> / {{ classAbilities.Ki_points }}
             </div>
+          </div>
+        </li>
+      </template>
+
+      <template v-if="classAbilities && classAbilities.class_name === 'Ensorceleur'">
+        <li class="col">
+          <div class="listing-item">
+            <div>
+              <p>Points de sorcellerie</p>
+            </div>
+            <div style="text-align: right">
+              <input type="number" min="0" class="invisible_input" v-model="information.witchcraft_points"
+                     @input="changeObject=true"> / {{ classAbilities.witchcraft_points }}
+            </div>
+          </div>
+        </li>
+      </template>
+
+      <template v-if="classAbilities && classAbilities.class_name === 'Occultiste'">
+        <li class="col">
+          <div class="listing-item">
+            Manifestations occultes <p>{{ classAbilities.manifestations }}</p>
           </div>
         </li>
       </template>
@@ -54,30 +76,34 @@ const data = useCharacterData();
 const characterClass = ref(data.value.class);
 const {getCLassAbilities} = useClassAbilities();
 const life_points = ref(data.value.life_points);
-const currentKiPoints = ref(data.value.informations.ki_points);
+const information = ref(useCharacterData().value.informations);
+const classAbilities = ref({});
 
-const classAbilities = ref(null);
-const isMonk = characterClass.value.find(c => c.class_name === 'Moine');
-const isBard = characterClass.value.find(c => c.class_name === 'Barde');
-
-if (isBard) {
+if (characterClass.value.find(c => c.class_name === 'Barde')) {
   classAbilities.value = getCLassAbilities('Barde');
 }
 
-if (isMonk) {
+if (characterClass.value.find(c => c.class_name === 'Moine')) {
   classAbilities.value = getCLassAbilities('Moine');
+}
+
+if (characterClass.value.find(c => c.class_name === 'Ensorceleur')) {
+  classAbilities.value = getCLassAbilities('Ensorceleur');
+}
+
+if (characterClass.value.find(c => c.class_name === 'Occultiste')) {
+  classAbilities.value = getCLassAbilities('Occultiste');
 }
 
 
 const {update} = useStrapi();
 const changeObject = ref(false);
 const updateData = async () => {
-  const {id, ...cleanData} = life_points.value;
+  const {id: lifeId, ...cleanData} = life_points.value;
+  const {id: infoId, ...cleanInformation} = information.value;
   await update('characters', data.value.documentId, {
     life_points: cleanData,
-    informations: {
-      ki_points: currentKiPoints.value,
-    }
+    informations: cleanInformation
   });
   changeObject.value = false;
 }

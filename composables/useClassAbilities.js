@@ -15,6 +15,12 @@ export const useClassAbilities = () => {
         if (getAbilities.class_name === "Moine") {
             result = monkAbilities(getAbilities);
         }
+        if (getAbilities.class_name === "Ensorceleur") {
+            result = sorcererAbilities(getAbilities);
+        }
+        if (getAbilities.class_name === "Occultiste") {
+            result = warlockAbilities(getAbilities);
+        }
         return result;
     }
 
@@ -46,5 +52,31 @@ const monkAbilities = (i) => {
     return {
         'class_name': 'Moine',
         'Ki_points': i.class_level
+    };
+}
+
+const sorcererAbilities = (i) => {
+    return {
+        'class_name': 'Ensorceleur',
+        'witchcraft_points': i.class_level,
+    }
+}
+
+const warlockAbilities = (i) => {
+
+    function getManifestations(l) {
+        if (l < 2) return 0;
+        if (l < 7) return 3;
+        if (l < 9) return 4;
+        if (l < 12) return 5;
+        if (l < 15) return 6;
+        if (l < 18) return 7;
+        if (l <= 20) return 8;
+        return "NC";
+    }
+
+    return {
+        'class_name': 'Occultiste',
+        'manifestations': getManifestations(i.class_level),
     };
 }
