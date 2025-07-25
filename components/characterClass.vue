@@ -58,7 +58,7 @@
   </div>
 </template>
 <script setup lang="js">
-import classesInfos from "../public/classesInfos.json";
+import classesInfos from "@/public/classesInfos.json";
 import {useCharacter} from "~/composables/useCharacter.js";
 import {useSkills} from "~/composables/useSkills.js";
 const {update} = useStrapi();

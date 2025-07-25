@@ -5,11 +5,11 @@
     </div>
     <ul class="listing">
       <li v-for="(item, key) in possessions" :key="key" class="listing-item">
-        {{ item.name }}
+        <span class="full" role="button" @click="editItem(item)">{{ item.name }}</span>
         <template v-if="item.quantity > 1"> x {{ item.quantity }}</template>
         <span>
-          <button class="btn btn-small" @click="editItem(item)">&hellip;</button>
-          <button class="btn btn-small" @click="deleteItem(item.id)">×</button>
+          <button class="btn btn-small btn-transparent" @click="editItem(item)">→</button>
+          <button class="btn btn-small btn-transparent" @click="deleteItem(item.id)">×</button>
         </span>
       </li>
     </ul>

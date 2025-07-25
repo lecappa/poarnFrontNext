@@ -1,5 +1,5 @@
-import classesInfos from "public/classesInfos.json";
-import allSkills from "public/skills.json";
+import classesInfos from "@/public/classesInfos.json";
+import allSkills from "@/public/skills.json";
 import {getMasteryBonus, useUnityCharacteristicsModifiers} from "~/composables/useModifiers.js";
 
 export const useSkills = () => {
@@ -77,7 +77,23 @@ export const useSkills = () => {
         })
     }
 
+    const ifHaveClass = (nameClass) => {
+        const {useCharacterData} = useCharacter();
+        const data = useCharacterData();
+        const characterClass = data.value.class;
+
+        console.log(characterClass);
+
+        for (const classe of characterClass) {
+            if (classe.class_name === nameClass) {
+                return true
+            }
+        }
+        return false
+    }
+
     return {
+        ifHaveClass,
         getClassSkills,
         getClassSkillsMastery,
         getSkills,

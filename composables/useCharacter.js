@@ -1,5 +1,5 @@
 import {useStrapiUser, useStrapi} from '#imports'
-import classesInfos from 'public/classesInfos.json'
+import classesInfos from '@/public/classesInfos.json'
 import {useUnityCharacteristicsModifiers} from '~/composables/useModifiers'
 
 const user = useStrapiUser()

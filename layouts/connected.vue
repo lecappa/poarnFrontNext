@@ -39,7 +39,7 @@
       </h1>
       <ul class="main-link">
         <li>
-          <nuxt-link to="/diary/" class="modal-close-link">Journal de campagne</nuxt-link>
+          <nuxt-link to="/diary/" class="modal-close-link">Journal  de campagne</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/character/fiche" class="modal-close-link">Fiche de personnage</nuxt-link>
@@ -50,9 +50,9 @@
         <li>
           <nuxt-link to="/dons/" class="modal-close-link">Dons</nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/manifestations/" class="modal-close-link">Manifestations occultes</nuxt-link>
-        </li>
+          <li v-if="ifHaveClass('Occultiste')">
+            <nuxt-link to="/manifestations/" class="modal-close-link">Manifestations occultes</nuxt-link>
+          </li>
         <li>
           <nuxt-link to="/histoires" class="modal-close-link">Les terres très anciennes</nuxt-link>
         </li>
@@ -72,7 +72,8 @@ import {useSpells} from "~/composables/useSpells.js";
 
 const {logout} = useStrapiAuth();
 const router = useRouter();
-import { useRoute } from 'vue-router'
+import {useRoute} from 'vue-router'
+
 const route = useRoute();
 const isVisible = ref(false);
 const updateVisibility = () => {
@@ -97,10 +98,13 @@ const disconnection = () => {
   router.push('/')
 }
 const {callCharacterData} = useCharacter();
-const {getSkills} = useSkills();
-const {canUseMagic, getSpellsSlot} = useSpells();
-await callCharacterData()
+const {useCharacterData} = useCharacter();
+const {getSkills, ifHaveClass} = useSkills();
+await callCharacterData();
+const data = useCharacterData();
 getSkills();
+
+const {canUseMagic} = useSpells();
 const magicClass = useState('magicClass', () => canUseMagic());
 
 onMounted(() => {

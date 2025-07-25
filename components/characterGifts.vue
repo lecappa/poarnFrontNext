@@ -5,9 +5,9 @@
     </div>
     <ul class="listing">
       <li v-for="(g, key) in characterFeats" :key="key" class="listing-item">
-        {{ g.name }}
+        <span class="full" role="button" @click="editFeat(g)">{{ g.name }}</span>
         <span>
-          <button class="btn btn-small btn-transparent" @click="editFeat(g)">&hellip;</button>
+          <button class="btn btn-small btn-transparent" @click="editFeat(g)">→</button>
           <button class="btn btn-small btn-transparent" @click="deleteFeat(g.id)">×</button>
         </span>
       </li>

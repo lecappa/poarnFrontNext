@@ -12,10 +12,30 @@
         </div>
       </div>
       <div class="col-lg-12">
-        <div class="listing-item">
-          <ul class="spell-slots">
-            <li v-for="(item, index, i) in magicSlots" :key="index">
 
+        <div class="listing-item">
+          <ul class="spell-slots" v-if="userMagicCLass === 'Occultiste'">
+            <li>
+              <span>Tours <br>de magie</span>
+              <b>{{ magicSlots['niveau_0'] }}</b>
+            </li>
+            <li>
+              <span>Sorts<br>connus</span>
+              <b>{{ magicSlots['connus'] }}</b>
+            </li>
+            <li>
+              <span>Emplacements<br> de sorts</span>
+              <b>{{ magicSlots['emplacement'] }}</b>
+            </li>
+            <li>
+              <span>Niveau<br>des emplacements</span>
+              <b>{{ magicSlots['niveau'] }}</b>
+            </li>
+          </ul>
+
+
+          <ul v-else class="spell-slots">
+            <li v-for="(item, index, i) in magicSlots" :key="index">
               <template v-if="userMagicCLass === 'Barde' && i === 0"><span>Tours de magie connus</span></template>
               <template v-else><span>Niveau {{ i }}</span></template>
               <b>{{ item }} sort{{ pluralize(item) }}</b>
@@ -26,11 +46,11 @@
     </div>
   </div>
   <div class="spells-navigation square-section" id="search">
-    <div class="square-section__header"><h4>Filtres</h4><!--v-if--></div>
+    <div class="square-section__header"><h4>Filtres</h4></div>
     <div class="spells-navigation__search">
       <label>
         <input type="checkbox" v-model="showOnlyCharacterSpells" class="form-check-input"/>
-        Uniquement mes sorts
+        Uniquement mes sorts connus
       </label>
       <div class="d-flex">
         <div style="width: 100%; margin-right: 1rem">
@@ -52,6 +72,7 @@
         </div>
         <select id="class-select" v-model="selectedClass" class="input select">
           <option disabled value="">-- Sélectionnez une classe --</option>
+          <option value="">Toutes les classes</option>
           <option v-for="cls in allClasses" :key="cls" :value="cls">
             {{ cls }}
           </option>
@@ -138,6 +159,8 @@
 </template>
 
 <script lang="js" setup>
+import {ref} from 'vue';
+
 const {useCharacterData, callCharacterData} = useCharacter();
 await callCharacterData();
 import {useSpells} from '@/composables/useSpells.js';
@@ -148,16 +171,19 @@ const magicSlots = useState('getSpellsSlot', () => getSpellsSlot());
 const data = useCharacterData();
 const character_spells = ref(data.value.spells);
 const {update} = useStrapi();
-const {getSpellsByClass, getAllClasses} = useSpells();
+const {getSpellsByClass, getAllClasses, getAllSpells} = useSpells();
 const userMagicCLass = ref(magicClass.value[1]);
 const selectedClass = ref(userMagicCLass.value);
 const allClasses = getAllClasses();
+const allSpells = getAllSpells();
 const openClassDialog = ref(false);
 const selectedSpell = ref([]);
 const showOnlyCharacterSpells = ref(false);
 const searchSpellName = ref('');
 const spellListContainer = ref(null);
 const searchInput = ref(null);
+
+console.log(allSpells)
 
 definePageMeta({
   middleware: 'auth',
@@ -170,10 +196,14 @@ const showSpell = (i) => {
 }
 
 const groupedSpells = computed(() => {
-  if (!selectedClass.value) return {}
 
+  let spells = getSpellsByClass()
   const spellIds = character_spells.value.map(s => s.spellId)
-  let spells = getSpellsByClass(selectedClass.value)
+
+
+  if (selectedClass.value) {
+    spells = getSpellsByClass(selectedClass.value)
+  }
 
   if (showOnlyCharacterSpells.value) {
     spells = spells.filter(spell => spellIds.includes(spell.Id))

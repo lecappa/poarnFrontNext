@@ -27,7 +27,7 @@
           <td> d20 + {{getAttack(weapon)}}</td>
           <td>{{getDamage(weapon)}}</td>
           <td style="width: 3rem;">
-            <button class="btn btn-small btn-transparent" @click="weaponEdit(weapon)">&hellip;</button>
+            <button class="btn btn-small btn-transparent" @click="weaponEdit(weapon)">→</button>
             <button class="btn btn-small btn-transparent" @click="weaponDelete(weapon.id)">×</button>
           </td>
         </tr>

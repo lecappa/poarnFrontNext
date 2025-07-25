@@ -1,4 +1,4 @@
-import featsJson from "public/manifestations.json";
+import featsJson from "@/public/manifestations.json";
 
 export const useManisfestations = () => {
     const manisfestationsList = () => {

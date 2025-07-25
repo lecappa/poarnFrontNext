@@ -1,5 +1,5 @@
-import jsonSpells from '../public/sorts.json';
-import jsonSpellsSlots from '../public/spells-slots.json';
+import jsonSpells from '@/public/sorts.json';
+import jsonSpellsSlots from '@/public/spells-slots.json';
 import {ref} from 'vue';
 
 const {useCharacterData} = useCharacter();
@@ -26,9 +26,19 @@ export const useSpells = () => {
     }
 
     const getSpellsByClass = (className) => {
-        return allSpellsData.value.filter(spell =>
-            spell.Classes.some(cls => cls.Value === className)
-        )
+        if (className) {
+            return allSpellsData.value.filter(spell =>
+                spell.Classes.some(cls => cls.Value === className)
+            )
+        }
+        else {
+            return allSpellsData.value
+        }
+
+    }
+
+    const getAllSpells = () => {
+        return allSpellsData.value
     }
 
     const getAllClasses = () => {
@@ -64,6 +74,7 @@ export const useSpells = () => {
     }
 
     return {
+        getAllSpells,
         getSpellsSlot,
         spellsSlots,
         allSpells,

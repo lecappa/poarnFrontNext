@@ -5,9 +5,9 @@
     </div>
     <ul class="listing">
       <li v-for="(info, key) in capacities" :key="key" class="listing-item">
-        {{ info.name }}
+        <span @click="editCapacity(info)" class="full" role="button">{{ info.name }}</span>
         <span>
-          <button class="btn btn-small btn-transparent" @click="editCapacity(info)">&hellip;</button>
+          <button class="btn btn-small btn-transparent" @click="editCapacity(info)">→</button>
           <button class="btn btn-small btn-transparent" @click="deleteCapacity(info.id)">×</button>
         </span>
       </li>

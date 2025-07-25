@@ -35,7 +35,7 @@
             </template>
           </td>
           <td style="width: 3rem;">
-            <button class="btn btn-small btn-transparent" @click="editArmor(armor)">&hellip;</button>
+            <button class="btn btn-small btn-transparent" @click="editArmor(armor)">→</button>
             <button type="button" class="btn btn-small btn-transparent" @click="deleteArmor(armor.id)">×</button>
           </td>
         </tr>
