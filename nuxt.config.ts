@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  typescript: {
+    strict: true,
+    typeCheck: true
+  },
   modules: ['@nuxtjs/strapi', '@nuxt/icon', 'nuxt-tiptap-editor', 'floating-vue/nuxt', 'nuxt-toast'],
   ssr: false,
   devtools: {enabled: true},
